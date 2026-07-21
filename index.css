@@ -69,42 +69,7 @@
     display: none;
 }
 
-/* Responsive Header */
-
-@media (max-width:991px) {
-    .content {
-        min-height: 90px;
-    }
-
-    .menu {
-        top: 0;
-        padding: 20px;
-    }
-
-    .menu label {
-        display: initial;
-    }
-
-    .menu .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: black;
-        display: none;
-    }
-
-    .menu .navbar ul li {
-        width: 100%;
-    }
-
-    #menu:checked~.navbar {
-        display: initial;
-    }
-}
-
 /* Main */
-
 /* carrusel */
 .d-item {
     height: 500px;
@@ -147,17 +112,17 @@
 .texto1 {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .imagen-izquierda {
     width: 400px;
     height: auto;
-    padding: 25px;
-}
+    padding: 0;
+    margin: 15px;
+    border: none;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.822);
 
-.contenido {
-    flex: 1;
 }
 
 .btnregistro {
@@ -168,6 +133,7 @@
     border-radius: 10%;
     background-color: #0f52ba;
     color: white;
+   
 }
 
 .btnregistro:hover {
@@ -178,15 +144,45 @@
     text-decoration: none;
 }
 
-/* sección de noticias */
-.noticias {
-    background-color: #e6e3e3;
+/* banner */
+.banner1{
+    position: relative;
+    display: block;
+}
+.banner1 img {
+    width: 100%;
+    height: auto;
+   
+}
+.banner1 nav{
+    position: absolute;
+    bottom:15px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.btnnosotros{
+    padding: 10px 50px;
+    border: none;
+    border-radius: 50px;
+    background-color: #ba0f0f;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.619);
+     
+}
+.btnnosotros:hover{
+   background-color: #770b0b;
 }
 
-.noticias h2 {
-    text-align: center;
+/* sección de noticias */
+.titulo-not {
+    color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
+    text-align: center;
+}
+
+.noticias {
+    background-color: #e6e3e3;
 }
 
 .tarjetas {
@@ -196,8 +192,18 @@
 }
 
 .card {
+    position: relative;
+    width: 18rem;
+    height: 300px;
     margin: 20px;
     border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.571);
+    border: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card-img {
@@ -209,47 +215,58 @@
 
 .card-body {
     position: absolute;
+    inset: 0;
     padding: 20px;
     color: aliceblue;
     background: rgba(0, 0, 0, 0.448);
     height: 100%;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    margin-top: auto;
 }
 
 /* sección de estadisticas */
+.estadisticas {
+    background: #090909;
+}
 
-.estadisticas-container{
+.estadisticas-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.titulo-estadisticas{
+.titulo-estadisticas {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 800;
-    padding:20px;
+    padding: 20px;
+    color: #e6e3e3;
 }
 
 .cards-estadisticas {
     width: 12rem;
-    margin: 10px;
-    background: black;
+    margin: 20px;
+    background: rgb(46, 45, 45);
     border-radius: 20px;
     text-align: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     transition: 0.6 ease;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.571);
 }
+
 .cards-estadisticas:hover {
     transform: scale(1.05);
-
 }
 
 .card-estadisticas p {
     font-size: 12px;
-   padding: 0 20px 20px 20px;
+    padding: 0 20px 20px 20px;
 }
 
 .card-estadisticas h3 {
@@ -264,8 +281,6 @@
     padding: 20px;
     font-size: 40px;
 }
-
-
 
 /* footer */
 .conteinerfooter {
@@ -343,13 +358,42 @@ footer {
     font-size: 15px;
 }
 
-/* Reponsive footer 
+/* Reponsive 
 pantallas medianas*/
 @media (max-width:991px) {
+    .content {
+        min-height: 90px;
+    }
+
+    .menu {
+        top: 0;
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: black;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked~.navbar {
+        display: initial;
+    }
+
     .footer-row {
         text-align: center;
     }
-
 
     .footer-links {
         width: 50%;
@@ -357,9 +401,18 @@ pantallas medianas*/
     }
 }
 
-/* Reponsive footer 
+/* Reponsive  
 pantallas Pequeñas*/
 @media (max-width:767px) {
+
+    .texto1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .banner1{
+       display: none;
+    }
+
     .footer-links {
         width: 100%;
         margin-bottom: 30px;
