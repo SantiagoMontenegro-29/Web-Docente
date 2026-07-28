@@ -1,0 +1,55 @@
+/* Main */
+.titulo-cursos {
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo-cursos h2 {
+    font-weight: bold;
+}
+
+.card-cursos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    width: 20rem;
+    box-shadow: 15px 5px 40px rgba(0, 0, 0, 0.408);
+    border: none;
+}
+
+.card-body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-body .btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto 0;
+    text-align: center;
+    background-color: var(--primary);
+    border: none;
+}
+
+.card-body .btn:hover {
+    background-color: var(--bg-main-tr);
+    color: black;
+}
+
+.card-text {
+    background-color: #7eb79e;
+    border-radius: 4px;
+    width: 55px;
+    text-align: center;
+    color: #2A4D3E;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
