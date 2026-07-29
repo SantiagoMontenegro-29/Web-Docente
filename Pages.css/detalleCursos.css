@@ -13,9 +13,13 @@
     font-weight: bold;
     color: black;
 }
+.titulo-detalle nav a i{
+   font-size: 20px;
+}
 
 .info-materia {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
     padding: 20px;
@@ -34,6 +38,11 @@
 .text-materia h3 {
    font-weight: bold;
 }
+
+.text-materia p {
+   margin: 5px;
+   text-align: le;
+}
 .datos {
     display: flex;
     flex-wrap: wrap; 
@@ -47,10 +56,12 @@
 
 .dato i {
     color: #2A4D3E; 
-    font-size: 30px;
+    font-size: 25px;
 }
 
-
+.dato p {
+    margin: 0;
+}
 
 .card-detalles {
     display: flex;
@@ -107,4 +118,15 @@
 .icono-detalle i {
     font-size: 50px;
     color: white;
+}
+
+/* Reponsive  
+pantallas Pequeñas*/
+@media (max-width:767px) {
+
+    .info-materia {
+        display: flex;
+        flex-direction: column;
+    }
+
 }

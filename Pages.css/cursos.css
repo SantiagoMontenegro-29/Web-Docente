@@ -53,3 +53,21 @@
     font-weight: bold;
 }
 
+.logo-alum {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-alum i {
+    display: flex;
+    align-items: center;
+    color: #2A4D3E;
+    font-size: 20px;
+    line-height: 1;
+    margin: 0;
+}
+
+.logo-alum p {
+    margin: 0;
+}
