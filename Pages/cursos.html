@@ -8,7 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="/Pages.css/cursos.css">
+    <link rel="stylesheet" href="/Pages.css/principal.css">
 </head>
 
 <body>
@@ -23,72 +24,67 @@
                 <nav class="navbar">
                     <ul>
                         <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="../Pages/cursos.html">Mis Cursos</a></li>
+                        <li><a href="./cursos.html">Mis Cursos</a></li>
                         <li><a href="">Mi Portafolio</a></li>
                         <li><a href="">Contacto</a></li>
                         <li><a href="">Acerca de Nosotros</a></li>
-                        <li><a href="./login.html">Login</a></li>
+                        <li><a href="../Pages/login.html">Login</a></li>
                         <li><a href="">Registrarse</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-
     </header>
+
     <main>
-        <section id="dashboard-grid">
-
-            <!--LOGIN -->
-            <article class="card" id="login-sec">
-                <h3>Iniciar Sesión</h3>
-                <form action="./error404.html" method="GET">
-                    <label for="loginUser">Usuario o Correo</label>
-                    <input type="text" id="loginUser" placeholder="Ingresá tu usuario o email" required>
-
-                    <label for="loginPass">Contraseña</label>
-                    <input type="password" id="loginPass" placeholder="••••••••" required>
-
-                    <button type="submit" class="btn">Ingresar</button>
-
-                    <a id="password-olv" href="./error404.html">¿Olvidaste tu contraseña?</a>
-
-                    <a href="./error404.html" class="btn" style="background-color: #db4437; text-center: center;">Ingresar con
-                        Google</a>
-                    <a href="./error404.html" class="btn" style="background-color: #00a4ef; text-center: center;">Ingresar con
-                        Microsoft</a>
-                </form>
-            </article>
-
-            <!-- REGISTRO -->
-            <article class="card" id="registro-sec">
-                <h3>Registrarse</h3>
-                <form action="./error404.html" method="GET">
-                    <label for="regNombre">Nombre y Apellido</label>
-                    <input type="text" id="regNombre" placeholder="Juan Pérez" required>
-
-                    <label for="regUser">Usuario</label>
-                    <input type="text" id="regUser" placeholder="jperez" required>
-
-                    <label for="regEmail">Correo Electrónico</label>
-                    <input type="email" id="regEmail" placeholder="juan@correo.com" required>
-
-                    <label for="regTel">Teléfono</label>
-                    <input type="tel" id="regTel" placeholder="3511234567" required>
-
-                    <label for="regInst">Institución Educativa</label>
-                    <input type="text" id="regInst" placeholder="Colegio Central" required>
-
-                    <label for="regPass">Contraseña</label>
-                    <input type="password" id="regPass" placeholder="••••••••" required>
-
-                    <label for="regPassConfirm">Confirmar Contraseña</label>
-                    <input type="password" id="regPassConfirm" placeholder="••••••••" required>
-
-                    <button type="submit" class="btn">Crear Cuenta</button>
-                </form>
-            </article>
-
+        <section class="cursos">
+            <div class="titulo-cursos">
+                <h2>Mis Cursos</h2>
+                <p>Aqui puedes ver los cursos que tienes asignados</p>
+            </div>
+            <div class="card-cursos">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/d9/79/1d/d9791d46a6c456b400edc163e7823f1a.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Lengua</h5>
+                        <p class="card-text"> 3° Año</p>
+                        <div class="logo-alum">
+                            <i class="fa-solid fa-user-group"></i>
+                            <p>32 alumnos</p>
+                        </div>
+                        <a href="/Pages/detalleCursos.html" class="btn btn-primary">Ingresar al curso</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://img.magnific.com/vector-gratis/pequenos-estudiantes-gran-signo-pi-ilustracion-vectorial-plana-nino-nina-estudiando-matematicas-algebra-escuela-o-universidad-sosteniendo-regla-usando-computadora-portatil-figuras-geometricas-segundo-plano-concepto-educacion_74855-23227.jpg?semt=ais_test_b&w=740&q=80"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Matemáticas</h5>
+                        <p class="card-text"> 1° Año</p>
+                        <div class="logo-alum">
+                            <i class="fa-solid fa-user-group"></i>
+                            <p>25 alumnos</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ingresar al curso</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://img.magnific.com/vector-gratis/objetos-laboratorio-ciencias_23-2148488312.jpg?semt=ais_test_b&w=740&q=80"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ciencias Sociales</h5>
+                        <p class="card-text"> 5° Año</p>
+                        <div class="logo-alum">
+                            <i class="fa-solid fa-user-group"></i>
+                            <p>29 alumnos</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ingresar al curso</a>
+                    </div>
+                </div>
+            </div>
         </section>
+
     </main>
     <footer>
         <div class="conteinerfooter">
@@ -133,7 +129,9 @@
 
         </div>
     </footer>
-
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 
 </html>

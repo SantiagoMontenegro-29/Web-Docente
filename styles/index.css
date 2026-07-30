@@ -213,7 +213,6 @@ body {
     border:1px solid var(--bg-card)
 }
 
-
 /* banner */
 .banner1 {
     position: relative;
@@ -264,6 +263,10 @@ body {
     padding: 40px 0 0 0;
     font-size: 100px;
     letter-spacing: 15px;
+}
+
+.noticias {
+    background-color: var(--bg-main);
 }
 
 .tarjetas {
@@ -505,7 +508,7 @@ pantallas medianas*/
         top: 100%;
         left: 0;
         right: 0;
-        background-color: black;
+        background-color: #2A4D3E;
         display: none;
     }
 

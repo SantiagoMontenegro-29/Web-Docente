@@ -1,0 +1,132 @@
+/* main */
+.titulo-detalle {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+.titulo-detalle nav a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+}
+.titulo-detalle nav a i{
+   font-size: 20px;
+}
+
+.info-materia {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 30px;
+    background-color: var(--bg-main2-tr);
+    border-radius: 8px;
+
+}
+
+.info-materia img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.text-materia h3 {
+   font-weight: bold;
+}
+
+.text-materia p {
+   margin: 5px;
+   text-align: le;
+}
+.datos {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 30px;
+}
+.dato {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dato i {
+    color: #2A4D3E; 
+    font-size: 25px;
+}
+
+.dato p {
+    margin: 0;
+}
+
+.card-detalles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    width: 18rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.416);
+    border: none;
+}
+
+.card-body .btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto 0;
+    text-align: center;
+    background-color: var(--primary);
+    border: none;
+}
+
+.card-body .btn:hover {
+    background-color: var(--bg-main-tr);
+    color: black;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-body h5 {
+    font-weight: bold;
+}
+
+.icono-detalle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color: #2A4D3E;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.icono-detalle i {
+    font-size: 50px;
+    color: white;
+}
+
+/* Reponsive  
+pantallas Pequeñas*/
+@media (max-width:767px) {
+
+    .info-materia {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
