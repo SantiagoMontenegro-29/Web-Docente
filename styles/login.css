@@ -90,6 +90,7 @@ body {
     font-weight: bold;
     text-decoration: none;
     transition: 0.3s;
+    border: 1px solid #0f172a00;
 }
 
 .menu .navbar ul li a:hover {
@@ -99,6 +100,7 @@ body {
     transform: translateX(-8px);
     transition: 0.5s;
     box-shadow: 5px 5px 20px rgb(0, 0, 0);
+    border:1px solid var(--bg-card)
 }
 
 #menu {
@@ -177,21 +179,23 @@ form input {
     background-color: var(--bg-main-tr);
     transition: 0.3s;
 }
-form input:hover{
+
+form input:hover {
     transform: translateX(-10px);
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 form input:focus {
     transform: scale(1.1);
     border-color: var(--bg-card);
     box-shadow: 5px 5px 10px rgb(0, 0, 0);
-    transition: 0.5s;
+    transition: 1s;
     background-color: var(--primary-hover);
 }
+
 input::placeholder {
     color: var(--bg-card);
-    opacity: 1;  
+    opacity: 1;
 }
 
 /* Botones */
@@ -201,7 +205,7 @@ input::placeholder {
     padding: 12px;
     background-color: var(--bg-main-tr);
     color: var(--bg-main);
-    border: none;
+    border: 1px solid #0f172a00;
     border-radius: 8px;
     font-weight: bold;
     font-size: 15px;
@@ -212,14 +216,16 @@ input::placeholder {
 }
 
 .btn:hover {
-    border-color: var(--bg-card);
-    box-shadow: 5px 5px 10px rgb(0, 0, 0);
-     transform: translateX(-10px);
-    transition: 0.4s;
-    background-color: var(--primary-hover);
+background-color: var(--bg-main-tr);
     color: var(--bg-card);
+    transition: 0.5s;
+    transform: translateX(-8px);
+    box-shadow: 5px 5px 20px rgb(0, 0, 0);
+    backdrop-filter:blur(4px) ;
+    border:1px solid var(--bg-card)
 }
-#password-olv{
+
+#password-olv {
     font-size: 0.9rem;
     text-decoration: none;
     text-align: center;
@@ -229,14 +235,17 @@ input::placeholder {
     padding: 10px;
     border-radius: 8px;
     transition: 0.3s;
+    border: 1px solid #0f172a00;
 }
-#password-olv:hover{
-    transform: translateX(-10px);
-    transition: 0.4s;
-    border-color: var(--bg-card);
-    box-shadow: 5px 5px 10px rgb(0, 0, 0);
-    background-color: var(--primary-hover);
+
+#password-olv:hover {
+background-color: var(--bg-main-tr);
     color: var(--bg-card);
+    transition: 0.5s;
+    transform: translateX(-8px);
+    box-shadow: 5px 5px 20px rgb(0, 0, 0);
+    backdrop-filter:blur(4px) ;
+    border:1px solid var(--bg-card)
 }
 
 /* ================= FOOTER ================= */

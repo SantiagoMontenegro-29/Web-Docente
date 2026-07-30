@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --bg-main: #aeaba6;
+    --bg-main-tr: #aeaba67d;
+    --bg-main2: #676766;
+    --bg-main2-tr: #6767667f;
+    --bg-main3: #3d3d3d;
+    --bg-main3-tr: #222222ab;
+    --bg-card: #FFFFFF;
+    --bg-card-tr: #ffffff7e;
+    --primary: #2A4D3E;
+    --primary-tr: #2a4d3e7d;
+    --text: #1C2826;
+}
+
+body.dark-mode {
+    --bg-main: #0F172A;
+    --bg-card: #1E293B;
+    --primary: #2A4D3E;
+    --text: #F8FAFC;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(../assets/img/Error404.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.container-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-volv {
+    background-color: var(--primary);
+    border: 1px solid var(--bg-main);
+    color: var(--bg-main);
+    padding: 2rem 2.50rem;
+    border-radius: 8px;
+    transition: 0.5s;
+    font-size: 30px;
+    text-shadow:5px 5px 10px rgb(0, 0, 0) ;
+}
+
+.btn-volv:hover {
+    transform: scale(1.2);
+    transition: 1s;
+    border-color: var(--bg-card);
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+    background-color: var(--primary-tr);
+    color: var(--bg-card);
+    backdrop-filter:blur(4px) ;
+}
+#text{
+    color: var(--bg-card);
+    text-shadow:5px 5px 10px rgb(0, 0, 0) ;
+    text-align: center;
+    font-size: 40px;
+    background-color: var(--primary-tr);
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    backdrop-filter:blur(4px) ;
+    border: 1px solid var(--bg-main);
+}
