@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e372c" />
+      <stop offset="100%" stop-color="#2A4D3E" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo Base (Recto) -->
+  <rect width="400" height="500" fill="url(#cardGrad)" />
+
+  <!-- Formas decorativas -->
+  <circle cx="350" cy="80" r="120" fill="#ffffff" opacity="0.05" />
+  <circle cx="50" cy="420" r="100" fill="#38BDF8" opacity="0.05" />
+
+  <!-- Tarjeta Interfaz Principal -->
+  <g transform="translate(40, 50)">
+    <rect width="320" height="400" fill="#ffffff" rx="12" />
+
+    <!-- Encabezado Tarjeta -->
+    <rect width="320" height="80" fill="#2A4D3E" rx="12" />
+    <rect y="60" width="320" height="20" fill="#2A4D3E" />
+
+    <!-- Icono Estado / Check -->
+    <circle cx="45" cy="40" r="18" fill="#A3E635" />
+    <path d="M 39 40 L 43 44 L 51 34" stroke="#1e372c" stroke-width="3" fill="none" stroke-linecap="round" />
+
+    <!-- Texto Header -->
+    <rect x="75" y="30" width="150" height="10" rx="5" fill="#ffffff" />
+    <rect x="75" y="48" width="90" height="8" rx="4" fill="#ffffff" opacity="0.6" />
+
+    <!-- Item 1: Curso Completado -->
+    <g transform="translate(25, 105)">
+      <rect width="270" height="65" fill="#F4F6F4" rx="8" />
+      <circle cx="35" cy="32" r="16" fill="#38BDF8" opacity="0.15" />
+      <path d="M 27 26 L 33 26 L 36 29 L 43 29 C 45 29 45 31 45 31 L 45 38 C 45 40 43 40 43 40 L 27 40 Z" fill="#38BDF8"/>
+      <rect x="65" y="22" width="120" height="10" rx="5" fill="#1C2826" />
+      <rect x="65" y="38" width="80" height="8" rx="4" fill="#888888" />
+      <rect x="210" y="24" width="45" height="18" rx="9" fill="#A3E635" />
+      <text x="232" y="37" fill="#1e372c" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">100%</text>
+    </g>
+
+    <!-- Item 2: Curso Avanzado -->
+    <g transform="translate(25, 185)">
+      <rect width="270" height="65" fill="#F4F6F4" rx="8" />
+      <circle cx="35" cy="32" r="16" fill="#2A4D3E" opacity="0.15" />
+      <path d="M 27 26 L 33 26 L 36 29 L 43 29 C 45 29 45 31 45 31 L 45 38 C 45 40 43 40 43 40 L 27 40 Z" fill="#2A4D3E"/>
+      <rect x="65" y="22" width="140" height="10" rx="5" fill="#1C2826" />
+      <rect x="65" y="38" width="95" height="8" rx="4" fill="#888888" />
+      <rect x="210" y="24" width="45" height="18" rx="9" fill="#38BDF8" />
+      <text x="232" y="37" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">85%</text>
+    </g>
+
+    <!-- Item 3: Curso en Proceso -->
+    <g transform="translate(25, 265)">
+      <rect width="270" height="65" fill="#F4F6F4" rx="8" />
+      <circle cx="35" cy="32" r="16" fill="#E07A5F" opacity="0.15" />
+      <path d="M 27 26 L 33 26 L 36 29 L 43 29 C 45 29 45 31 45 31 L 45 38 C 45 40 43 40 43 40 L 27 40 Z" fill="#E07A5F"/>
+      <rect x="65" y="22" width="110" height="10" rx="5" fill="#1C2826" />
+      <rect x="65" y="38" width="70" height="8" rx="4" fill="#888888" />
+      <rect x="210" y="24" width="45" height="18" rx="9" fill="#E07A5F" opacity="0.3" />
+      <text x="232" y="37" fill="#E07A5F" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">50%</text>
+    </g>
+
+    <!-- Resumen Footer -->
+    <rect x="25" y="350" width="270" height="30" rx="6" fill="#2A4D3E" opacity="0.08" />
+    <text x="160" y="369" fill="#2A4D3E" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">3 Cursos Gestionados</text>
+  </g>
+</svg>

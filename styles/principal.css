@@ -7,27 +7,42 @@
 }
 
 :root {
-    --bg-main: #aeaba6;
+    --bg-main: #f0f2f5;
     --bg-main-tr: #aeaba67d;
     --bg-main2: #676766;
     --bg-main2-tr: #6767667f;
     --bg-main3: #3d3d3d;
     --bg-main3-tr: #3d3d3d7e;
     --bg-card: #FFFFFF;
-    --bg-card-tr: #ffffff7e;
     --primary: #2A4D3E;
+    --primary-hover: #1e372c;
     --primary-tr: #2a4d3e7d;
     --text: #1C2826;
+    --border-color: #dcdcdc;
 }
 
 body.dark-mode {
     --bg-main: #0F172A;
     --bg-card: #1E293B;
-    --primary: #2A4D3E;
+    --primary: #38BDF8;
+    --primary-hover: #0284c7;
     --text: #F8FAFC;
+    --border-color: #334155;
 }
 
-/* estilos del menu */
+body {
+    background-image: url(../assets/img/fondo.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ================= HEADER Y NAV ================= */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -110,7 +125,7 @@ body.dark-mode {
     transform: translateX(-8px);
     transition: 0.5s;
     box-shadow: 5px 5px 20px rgb(0, 0, 0);
-    border: 1px solid var(--bg-card);
+    border:1px solid var(--bg-card)
 }
 
 #menu {
@@ -136,7 +151,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--bg-main3);
+    background-color: var(--bg-main3-tr);
     padding: 80px 0;
     font-family: sans-serif;
     text-transform: capitalize

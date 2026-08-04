@@ -1,0 +1,175 @@
+:root {
+    --bg-card-tr: #ffffff7e;
+}
+
+body.dark-mode {
+    --bg-card-tr: #1e293bcc;
+}
+
+.detalle-alumno-main {
+    flex: 1;
+    padding: 35px 20px 50px;
+}
+
+.detalle-alumno-contenido {
+    max-width: 1100px;
+}
+
+.titulo-alumno {
+    position: relative;
+    margin-bottom: 28px;
+    padding: 40px 30px;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 12px;
+    background: linear-gradient(120deg, #1c382c, #2A4D3E, #597961);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.45);
+}
+
+.titulo-alumno a {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.titulo-alumno a i {
+    position: absolute;
+    left: 0;
+    font-size: 28px;
+}
+
+.titulo-alumno p {
+    margin: 0;
+    font-size: 17px;
+}
+
+.detalle-alumno-contenido > .card {
+    overflow: hidden;
+    margin-top: 22px !important;
+    color: var(--text);
+    background-color: var(--bg-card-tr);
+    border: 1px solid var(--bg-card);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    transition: 0.4s;
+}
+
+.detalle-alumno-contenido > .card:hover {
+    transform: translateX(-8px);
+    box-shadow: 15px 0 25px rgba(0, 0, 0, 0.35);
+}
+
+.detalle-alumno-contenido .card-header {
+    padding: 16px 24px;
+    color: white;
+    background-color: var(--primary);
+    border: 0;
+}
+
+.detalle-alumno-contenido .card-header h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.detalle-alumno-contenido .card-body {
+    padding: 24px;
+}
+
+.detalle-alumno-contenido .card-body p {
+    margin-bottom: 12px;
+}
+
+.detalle-alumno-contenido .card-body p:last-child {
+    margin-bottom: 0;
+}
+
+.detalle-alumno-contenido .card-body strong {
+    color: var(--primary);
+}
+
+.detalle-alumno-contenido .table {
+    overflow: hidden;
+    margin: 0;
+    color: var(--text);
+    border-color: var(--border-color);
+    border-radius: 8px;
+    background-color: var(--bg-card-tr);
+}
+
+.detalle-alumno-contenido .table-dark th {
+    color: white;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.detalle-alumno-contenido .table-striped > tbody > tr:nth-of-type(odd) > * {
+    color: var(--text);
+    background-color: var(--bg-main-tr);
+}
+
+.detalle-alumno-contenido .table-hover > tbody > tr:hover > * {
+    color: var(--text);
+    background-color: var(--primary-tr);
+}
+
+.detalle-alumno-contenido .badge {
+    padding: 7px 10px;
+    background-color: var(--primary) !important;
+}
+
+.volver-registro {
+    margin-top: 30px;
+}
+
+.volver-registro .btn {
+    padding: 10px 22px;
+    color: var(--bg-card);
+    font-weight: bold;
+    background-color: var(--primary);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.volver-registro .btn:hover {
+    color: var(--bg-card);
+    background-color: var(--bg-main-tr);
+    border-color: var(--bg-card);
+    transform: translateX(-8px);
+    box-shadow: 5px 5px 20px rgb(0, 0, 0);
+}
+
+@media (max-width: 767px) {
+    .detalle-alumno-main {
+        padding: 25px 16px 40px;
+    }
+
+    .titulo-alumno {
+        padding: 30px 20px;
+    }
+
+    .titulo-alumno a {
+        font-size: 29px;
+    }
+
+    .titulo-alumno a i {
+        font-size: 23px;
+    }
+
+    .detalle-alumno-contenido .card-header,
+    .detalle-alumno-contenido .card-body {
+        padding: 18px;
+    }
+
+    .detalle-alumno-contenido .card-header h2 {
+        font-size: 19px;
+    }
+}

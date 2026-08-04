@@ -3,6 +3,14 @@ body {
     height: 100%;
 }
 
+:root {
+    --bg-card-tr: #ffffff7e;
+}
+
+body.dark-mode {
+    --bg-card-tr: #1e293bcc;
+}
+
 body {
     min-height: 100vh;
     display: flex;
@@ -17,4 +25,127 @@ body {
 
 main {
     flex: 1;
+}
+
+.registro-alumnos-main {
+    padding: 35px 20px 50px;
+}
+
+.registro-alumnos-contenido {
+    max-width: 1100px;
+}
+
+.titulo-registro {
+    margin-bottom: 28px;
+    padding: 40px 30px;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 12px;
+    background: linear-gradient(120deg, #1c382c, #2A4D3E, #597961);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.45);
+}
+
+.titulo-registro a {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.titulo-registro a i {
+    position: absolute;
+    left: 0;
+    font-size: 28px;
+}
+
+.titulo-registro p {
+    margin: 0;
+    font-size: 17px;
+}
+
+.lista-alumnos {
+    overflow: hidden;
+    padding: 20px;
+    color: var(--text);
+    background-color: var(--bg-card-tr);
+    border: 1px solid var(--bg-card);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.lista-alumnos .table {
+    margin: 0;
+    color: var(--text);
+    border-color: var(--border-color);
+    vertical-align: middle;
+}
+
+.lista-alumnos .table-dark th {
+    padding: 15px 12px;
+    color: white;
+    white-space: nowrap;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.lista-alumnos .table td {
+    padding: 14px 12px;
+    background-color: transparent;
+}
+
+.lista-alumnos .table-striped > tbody > tr:nth-of-type(odd) > * {
+    color: var(--text);
+    background-color: var(--bg-main-tr);
+}
+
+.lista-alumnos .table-hover > tbody > tr:hover > * {
+    color: var(--text);
+    background-color: var(--primary-tr);
+}
+
+.lista-alumnos .btn {
+    padding: 7px 12px;
+    color: var(--bg-card);
+    font-weight: bold;
+    background-color: var(--primary);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.lista-alumnos .btn:hover {
+    color: var(--bg-card);
+    background-color: var(--bg-main-tr);
+    border-color: var(--bg-card);
+    transform: translateX(-5px);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 767px) {
+    .registro-alumnos-main {
+        padding: 25px 16px 40px;
     }
+
+    .titulo-registro {
+        padding: 30px 20px;
+    }
+
+    .titulo-registro a {
+        font-size: 28px;
+    }
+
+    .titulo-registro a i {
+        font-size: 23px;
+    }
+
+    .lista-alumnos {
+        padding: 12px;
+    }
+}

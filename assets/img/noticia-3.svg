@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgN3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1510"/>
+      <stop offset="60%" stop-color="#14281e"/>
+      <stop offset="100%" stop-color="#2A4D3E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="500" fill="url(#bgN3)"/>
+
+  <!-- Grupo Principal Centrado en (200, 250) -->
+  <g transform="translate(200, 250)">
+    <circle cx="0" cy="0" r="130" fill="#38BDF8" opacity="0.06"/>
+    <circle cx="0" cy="0" r="90" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+
+    <!-- Megáfono Centrado -->
+    <g transform="translate(-5, 0)">
+      <path d="M -40 0 L -10 -20 L -10 20 L -40 10 Z" fill="#38BDF8"/>
+      <path d="M -10 -20 L 30 -40 L 30 40 L -10 20 Z" fill="#2A4D3E" stroke="#ffffff" stroke-width="2"/>
+      <rect x="-50" y="-5" width="10" height="20" rx="3" fill="#A3E635"/>
+      
+      <!-- Ondas -->
+      <path d="M 40 -15 C 50 -5 50 15 40 25" stroke="#A3E635" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <path d="M 52 -28 C 68 -10 68 20 52 38" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" fill="none"/>
+    </g>
+  </g>
+</svg>

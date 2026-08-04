@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgN2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1510"/>
+      <stop offset="60%" stop-color="#1e372c"/>
+      <stop offset="100%" stop-color="#2A4D3E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="500" fill="url(#bgN2)"/>
+
+  <!-- Grupo Principal Centrado en (200, 250) -->
+  <g transform="translate(200, 250)">
+    <circle cx="0" cy="0" r="130" fill="#A3E635" opacity="0.05"/>
+    <circle cx="0" cy="0" r="90" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+    
+    <!-- Carpeta Digital Centrada -->
+    <rect x="-80" y="-55" width="160" height="110" rx="12" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+    <path d="M -60 -55 L -15 -55 L 5 -38 L 80 -38" stroke="#38BDF8" stroke-width="3" fill="none"/>
+    
+    <!-- Botón / Flecha Carga -->
+    <circle cx="0" cy="15" r="32" fill="#14281e" stroke="#A3E635" stroke-width="3"/>
+    <path d="M 0 30 L 0 0 M -12 12 L 0 0 L 12 12" stroke="#A3E635" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+</svg>

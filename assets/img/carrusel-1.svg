@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e372c" />
+      <stop offset="100%" stop-color="#2A4D3E" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo Principal (SIN bordes redondeados) -->
+  <rect width="1200" height="450" fill="url(#bgGrad1)"/>
+
+  <!-- Formas decorativas de fondo -->
+  <circle cx="1050" cy="225" r="220" fill="#ffffff" opacity="0.04" />
+  <circle cx="1100" cy="225" r="140" fill="#ffffff" opacity="0.04" />
+  <path d="M 750 0 C 850 150 950 300 1200 250 L 1200 0 Z" fill="#ffffff" opacity="0.06"/>
+
+  <!-- Etiqueta / Badge -->
+  <rect x="70" y="70" width="220" height="34" rx="17" fill="rgba(255,255,255,0.15)"/>
+  <text x="180" y="92" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" text-anchor="middle" letter-spacing="1.5">NOVEDAD INSTITUCIONAL</text>
+
+  <!-- Título Principal -->
+  <text x="70" y="165" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="40" font-weight="bold">La plataforma que transforma</text>
+  <text x="70" y="215" fill="#A3E635" font-family="'Segoe UI', sans-serif" font-size="40" font-weight="bold">tu gestión pedagógica</text>
+
+  <!-- Bajada de texto -->
+  <text x="70" y="270" fill="#E2E8F0" font-family="'Segoe UI', sans-serif" font-size="18">Centralizá cursos, asistencias y calificaciones en un solo lugar.</text>
+
+  <!-- Ilustración vectorial derecha -->
+  <g transform="translate(780, 85)">
+    <rect width="320" height="260" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+    
+    <rect x="40" y="180" width="30" height="40" rx="4" fill="#38BDF8" opacity="0.8"/>
+    <rect x="90" y="140" width="30" height="80" rx="4" fill="#38BDF8" opacity="0.9"/>
+    <rect x="140" y="100" width="30" height="120" rx="4" fill="#A3E635"/>
+    <rect x="190" y="120" width="30" height="100" rx="4" fill="#38BDF8"/>
+    <rect x="240" y="70" width="30" height="150" rx="4" fill="#A3E635"/>
+
+    <rect x="40" y="35" width="120" height="12" rx="6" fill="#ffffff" opacity="0.6"/>
+    <rect x="40" y="55" width="240" height="8" rx="4" fill="#ffffff" opacity="0.2"/>
+  </g>
+</svg>

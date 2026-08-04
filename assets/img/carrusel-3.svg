@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1f17" />
+      <stop offset="100%" stop-color="#2A4D3E" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo Principal (Recto) -->
+  <rect width="1200" height="450" fill="url(#bgGrad3)"/>
+
+  <!-- Tramas de fondo -->
+  <circle cx="100" cy="380" r="200" fill="#38BDF8" opacity="0.04" />
+  <path d="M 600 0 L 1200 0 L 1200 450 Z" fill="#ffffff" opacity="0.02"/>
+
+  <!-- Etiqueta / Badge -->
+  <rect x="70" y="70" width="240" height="34" rx="17" fill="rgba(255,255,255,0.15)"/>
+  <text x="190" y="92" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" text-anchor="middle" letter-spacing="1.5">MÉTRICAS &amp; ESTADÍSTICAS</text>
+
+  <!-- Título Principal -->
+  <text x="70" y="165" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="40" font-weight="bold">Reportes e indicadores</text>
+  <text x="70" y="215" fill="#38BDF8" font-family="'Segoe UI', sans-serif" font-size="40" font-weight="bold">en tiempo real</text>
+
+  <!-- Subtítulo -->
+  <text x="70" y="270" fill="#E2E8F0" font-family="'Segoe UI', sans-serif" font-size="18">Visualizá el rendimiento académico y la asistencia de forma instantánea.</text>
+
+  <!-- Gráfico Circular y Tarjetas de Métricas -->
+  <g transform="translate(750, 75)">
+    <rect width="370" height="290" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+    
+    <!-- Anillo / Donut Chart -->
+    <circle cx="110" cy="145" r="75" stroke="rgba(255,255,255,0.1)" stroke-width="20" fill="none"/>
+    <circle cx="110" cy="145" r="75" stroke="#A3E635" stroke-width="20" stroke-dasharray="330 140" stroke-dashoffset="80" fill="none"/>
+    <circle cx="110" cy="145" r="75" stroke="#38BDF8" stroke-width="20" stroke-dasharray="100 370" stroke-dashoffset="-250" fill="none"/>
+    
+    <text x="110" y="140" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="22" font-weight="bold" text-anchor="middle">88%</text>
+    <text x="110" y="162" fill="#E2E8F0" font-family="'Segoe UI', sans-serif" font-size="11" text-anchor="middle">Asistencia</text>
+
+    <!-- Indicadores laterales -->
+    <g transform="translate(210, 60)">
+      <rect width="130" height="70" fill="#1e372c" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+      <text x="15" y="28" fill="#E2E8F0" font-family="'Segoe UI', sans-serif" font-size="11">Aprobados</text>
+      <text x="15" y="55" fill="#A3E635" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="bold">92%</text>
+    </g>
+
+    <g transform="translate(210, 150)">
+      <rect width="130" height="70" fill="#1e372c" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+      <text x="15" y="28" fill="#E2E8F0" font-family="'Segoe UI', sans-serif" font-size="11">Promedio General</text>
+      <text x="15" y="55" fill="#38BDF8" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="bold">8.4</text>
+    </g>
+  </g>
+</svg>

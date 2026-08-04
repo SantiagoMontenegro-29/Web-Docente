@@ -160,7 +160,7 @@ main {
 
 /* Tarjetas (Login Registro) */
 .card {
-    background-color: var(--primary);
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
@@ -283,7 +283,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--bg-main3);
+    background-color: var(--bg-main3-tr);
     padding: 80px 0;
     font-family: sans-serif;
     text-transform: capitalize

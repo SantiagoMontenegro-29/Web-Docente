@@ -44,7 +44,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 12px;
     background: linear-gradient(120deg, #1c382c, #2A4D3E, #597961);
-    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.671);
 }
 
 .titulo-portafolio h2 {
