@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Gestión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../styles/gestion.css">
+    <link rel="stylesheet" href="../styles/principal.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="content">
+            <div class="menu container">
+                <div class="marca">
+                    <a href="index.html" class="logo">
+                        <img src="../assets/img/Logo.png" alt="Logo de TizaDigital">
+                    </a>
+                    <span class="nombre-proyecto">TizaDigital</span>
+                </div>
+                <input type="checkbox" id="menu">
+                <label for="menu"><i class="fa-solid fa-bars" style="color: white;"></i></label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./cursos.html">Mis Cursos</a></li>
+                        <li><a href="./portafolio.html">Mi Portafolio</a></li>
+                        <li><a href="">Contacto</a></li>
+                        <li><a href="">Acerca de Nosotros</a></li>
+                        <li><a href="../Pages/login.html">Login y Registro</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="gestion">
+            <article class="conteiner-gestion">
+                <div class="titulo">
+                    <i class="fa-solid fa-users"></i>
+                    <h2>Gestión de Docentes</h2>
+                </div>
+                <div class="buscador">
+                    <nav class="navbar">
+                        <form class="container-fluid">
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1"><i
+                                        class="fa-solid fa-magnifying-glass"></i></span>
+                                <input type="text" class="form-control" placeholder="Buscar docente..."
+                                    aria-label="Username" aria-describedby="basic-addon1" />
+                            </div>
+                        </form>
+                    </nav>
+                    <button class="btn-gestion">+ Agregar docente</button>
+                </div>
+            </article>
+            <article class="tabla-docentes">
+                <div class="tabla-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Materia</th>
+                                <th scope="col">Cursos asignados</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Correo electrónico</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">María Gonzáles</th>
+                                <td>Matemática</td>
+                                <td>1°A</td>
+                                <td><span class="activo">Activo</span></td>
+                                <td>maria@institicion.edu.ar</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Juan Pérez</th>
+                                <td>Historia</td>
+                                <td>2°B</td>
+                                <td><span class="inactivo">Inactivo</span></td>
+                                <td>juan@institicion.edu.ar</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Laura Gómez</th>
+                                <td>Lengua</td>
+                                <td>3°A</td>
+                                <td><span class="activo">Activo</span></td>
+                                <td>laura@institicion.edu.ar</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </section>
+
+        <section class="gestion">
+            <article class="conteiner-gestion">
+                <div class="titulo">
+                    <i class="fa-solid fa-school-flag"></i>
+                    <h2>Gestión de Cursos</h2>
+                </div>
+                <div class="buscador">
+                    <nav class="navbar">
+                        <form class="container-fluid">
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1"><i
+                                        class="fa-solid fa-magnifying-glass"></i></span>
+                                <input type="text" class="form-control" placeholder="Buscar curso..."
+                                    aria-label="Username" aria-describedby="basic-addon1" />
+                            </div>
+                        </form>
+                    </nav>
+                    <button class="btn-gestion">+ Agregar curso</button>
+                </div>
+            </article>
+            <article class="tabla-cursos">
+                <div class="tabla-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Curso</th>
+                                <th scope="col">División</th>
+                                <th scope="col">Cantidad de alumnos</th>
+                                <th scope="col">Docente responsable</th>
+                                <th scope="col">Turno</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1°</th>
+                                <td>A</td>
+                                <td>32</td>
+                                <td>María Gonzáles</td>
+                                <td>Mañana</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2°</th>
+                                <td>B</td>
+                                <td>29</td>
+                                <td>Juan Pérez</td>
+                                <td>Mañana</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3°</th>
+                                <td>A</td>
+                                <td>32</td>
+                                <td>Laura Gómez</td>
+                                <td>Mañana</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </section>
+        <section class="btn-estadisticas">
+            <nav> <a href=""><button>Ver Estadísticas</button></a></nav>
+        </section>
+    </main>
+
+    <footer>
+        <div class="conteinerfooter">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Portafolio Digital</h4>
+                    <p id="texfooter">
+                        Una plataforma diseñada para que los docentes gestionen cursos, planificaciones, asistencias,
+                        calificaciones y documentación académica desde un único lugar, de forma simple, segura y
+                        eficiente.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Contacto de la Institución</h4>
+                    <ul>
+                        <li><a href="https://mail.google.com" target="_blank">contacto@portafoliodigital.edu.ar</a></li>
+                        <li><a href="https://web.whatsapp.com/" target="_blank"> +54 383 456-7890</a></li>
+                        <li><a href="https://www.google.com/maps" target="_blank">Av. Belgrano 1234, San Fernando del
+                                Valle de Catamarca</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Nuestro Contacto</h4>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>redes Sociales</h4>
+                    <div class="sociales-link">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"
+                                style="color: white;"></i></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"
+                                style="color: white;"></i></a>
+                        <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter"
+                                style=" color: white;"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</html>
