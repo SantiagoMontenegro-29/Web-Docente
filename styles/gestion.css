@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+:root {
+    --bg-main: #aeaba6;
+    --bg-main-tr: #aeaba67d;
+    --bg-main2: #676766;
+    --bg-main2-tr: #6767667f;
+    --bg-main3: #3d3d3d;
+    --bg-main3-tr: #3d3d3d7e;
+    --bg-card: #FFFFFF;
+    --bg-card-tr: #ffffff7e;
+    --primary: #2A4D3E;
+    --primary-tr: #2a4d3e7d;
+    --text: #1C2826;
+}
+
+body.dark-mode {
+    --bg-main: #0F172A;
+    --bg-card: #1E293B;
+    --primary: #2A4D3E;
+    --text: #F8FAFC;
+}
+
+/* cuadro gestion */
+.gestion {
+    background-color: #e3e3e2;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.811);
+    margin: 30px;
+    padding: 20px;
+}
+
+.conteiner-gestion {
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* titulo y logo */
+.titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.gestion h2 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.gestion i {
+    font-size: 30px;
+    margin: 0;
+}
+
+/* buscador y botón */
+.buscador {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.buscador i {
+    color: #8a8e8f;
+    font-size: 15px;
+}
+
+.buscador button {
+    background:#0F172A;
+    color: #FFFFFF;
+    border-radius: 15px;
+    border: none;
+    width: 150px;
+    height: 50px;
+}
+
+.buscador button:hover {
+    background:rgb(156, 178, 198);
+    color: #0F172A;
+}
+
+/*tabla */
+.tabla-responsive {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.table {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.table thead th {
+    background-color: #293349;
+    color: white;
+    text-align: center
+}
+
+.table td {
+    text-align: center;
+    margin: 0;
+}
+
+.table tbody th {
+    text-align: center;
+}
+
+.activo {
+    background-color: #d4edda;
+    color: green;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.inactivo {
+    background-color: #f8d7da;
+    color: #dc3545;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.btn-estadisticas{
+    display: flex;
+    justify-content: center;
+}
+.btn-estadisticas button{
+    background:#0F172A;
+    color: #FFFFFF;
+    border-radius: 15px;
+    border: none;
+    width: 300px;
+    height: 50px;
+    margin: 30px;
+}
+
+.btn-estadisticas button:hover {
+    background:rgb(156, 178, 198);
+    color: #0F172A;
+}
+
+@media (max-width: 768px) {
+    .tabla-responsive {
+        overflow-x: auto;
+    }
+
+    .conteiner-gestion {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .buscador {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .buscador .navbar,
+    .buscador button {
+        width: 100%;
+    }
+}
