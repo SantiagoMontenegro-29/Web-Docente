@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas</title>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!--CSS-->
+    <link rel="stylesheet" href="../Pages.css/principal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../styles/estadisticas.css">
+</head>
+
+<body>
+    <header>
+        <div class="content">
+            <div class="menu container">
+                <a href="index.html" class="logo">
+                    <img src="../assets/img/Logo.png" alt="">
+                </a>
+                <input type="checkbox" id="menu">
+                <label for="menu"><i class="fa-solid fa-bars" style="color: white;"></i></label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./cursos.html">Mis Cursos</a></li>
+                        <li><a href="">Mi Portafolio</a></li>
+                        <li><a href="">Contacto</a></li>
+                        <li><a href="">Acerca de Nosotros</a></li>
+                        <li><a href="../Pages/login.html">Login</a></li>
+                        <li><a href="">Registrarse</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container mt-5">
+            <h1 class="text-center mb-4">Panel de Estadísticas</h1>
+            <p class="text-center text-muted mt-5">Visualización del rendimiento académico</p>
+            <div class="container mt-4">
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="card text-center shadow">
+                            <div class="card-body">
+                                <h5> <i class="fa-solid fa-chalkboard-user"></i>Docentes</h5>
+                                <h2>24</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center shadow">
+                            <div class="card-body">
+                                <h5> <i class="fa-solid fa-book"></i>Cursos</h5>
+                                <h2>12</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center shadow">
+                            <div class="card-body">
+                                <h5> <i class="fa-solid fa-user-graduate"></i>Alumnos</h5>
+                                <h2>117</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center shadow">
+                            <div class="card-body">
+                                <h5> <i class="fa-solid fa-calendar-check"></i>Asistencia</h5>
+                                <h2>94%</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow">
+                            <div class="card-header">
+                                <h5 class="mb-0">Cantidad de docentes por curso</h5>
+                            </div>
+                            <div class="card-body text-center">
+                                <img src="https://quickchart.io/chart?c={type:'bar',data:{labels:['Lengua','Matemática','Historia','Inglés'],datasets:[{label:'Docentes',data:[2,2,2,2]}]}}"
+                                    class="img-fluid" alt="Gráfico de docentes por curso">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow">
+                            <div class="card-header">
+                                <h5 class="mb-0">Cantidad de alumnos por curso</h5>
+                            </div>
+                            <div class="card-body text-center">
+                                <img src="https://quickchart.io/chart?c={type:'bar',data:{labels:['Lengua','Matemática','Historia','Inglés'],datasets:[{label:'Alumnos',data:[32,30,28,27]}]}}"
+                                    class="img-fluid" alt="Gráfico de alumnos por curso">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow">
+                            <div class="card-header">
+                                <h5 class="mb-0">Promedio de calificaciones por curso</h5>
+                            </div>
+                            <div class="card-body text-center">
+                                <img src="https://quickchart.io/chart?c={type:'pie',data:{labels:['Lengua','Matemática','Historia','Inglés'],datasets:[{data:[8.4,7.9,8.8,8.2]}]}}"
+                                    class="img-fluid" alt="Gráfico de promedio por curso">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow">
+                            <div class="card-header">
+                                <h5 class="mb-0">Promedio de asistencia por curso</h5>
+                            </div>
+                            <div class="card-body text-center">
+                                <img src="https://quickchart.io/chart?c={type:'line',data:{labels:['Lengua','Matemática','Historia','Inglés'],datasets:[{label:'Asistencia',data:[95,92,90,97]}]}}"
+                                    class="img-fluid" alt="Gráfico de asistencia por curso">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div class="conteinerfooter">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Portafolio Digital</h4>
+                    <p id="texfooter">
+                        Una plataforma diseñada para que los docentes gestionen cursos, planificaciones, asistencias,
+                        calificaciones y documentación académica desde un único lugar, de forma simple, segura y
+                        eficiente.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Contacto de la Institución</h4>
+                    <ul>
+                        <li><a href="https://mail.google.com" target="_blank">contacto@portafoliodigital.edu.ar</a></li>
+                        <li><a href="https://web.whatsapp.com/" target="_blank"> +54 383 456-7890</a></li>
+                        <li><a href="https://www.google.com/maps" target="_blank">Av. Belgrano 1234, San Fernando del
+                                Valle de Catamarca</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Nuestro Contacto</h4>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>redes Sociales</h4>
+                    <div class="sociales-link">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"
+                                style="color: white;"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"
+                                style="color: white;"></i></a>
+                        <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter"
+                                style=" color: white;"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</html>
