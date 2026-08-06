@@ -5,8 +5,9 @@
     text-decoration: none;
     list-style: none;
 }
+
 :root {
-    --bg-main: #aeaba6;
+    --bg-main: #f0f2f5;
     --bg-main-tr: #aeaba67d;
     --bg-main2: #676766;
     --bg-main2-tr: #6767667f;
@@ -15,51 +16,58 @@
     --bg-card: #FFFFFF;
     --bg-card-tr: #ffffff7e;
     --primary: #2A4D3E;
+    --primary-hover: #1e372c;
     --primary-tr: #2a4d3e7d;
     --text: #1C2826;
+    --border-color: #dcdcdc;
 }
 
 body.dark-mode {
     --bg-main: #0F172A;
     --bg-card: #1E293B;
-    --primary: #2A4D3E;
+    --bg-card-tr: #1e293bcc;
+    --primary: #38BDF8;
+    --primary-hover: #0284c7;
     --text: #F8FAFC;
+    --border-color: #334155;
 }
 
-/* titulo */
-.titulo-detalle {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 20px;
-}
-
-.titulo-detalle nav a {
+body {
+    background-image: url(../assets/img/fondo.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: bold;
-    color: black;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.titulo-detalle nav a i {
-    font-size: 20px;
+main {
+    flex: 1;
 }
 
-/* cuadro gestion */
+/* Gestión */
 .gestion {
-    background-color: #e3e3e2;
-     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.811);
-    margin: 30px;
+    max-width: 1100px;
+    margin: 0 auto 30px;
     padding: 20px;
+    color: var(--text);
+    background-color: var(--bg-card-tr);
+    border: 1px solid var(--bg-card);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
 }
 
 .conteiner-gestion {
-    width: 90%;
-    margin: 30px auto;
+    width: 100%;
+    margin: 0 auto 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 /* titulo y logo */
@@ -67,16 +75,18 @@ body.dark-mode {
     display: flex;
     align-items: center;
     gap: 10px;
-
 }
 
 .gestion h2 {
     margin: 0;
     font-size: 25px;
+    color: var(--primary);
+    font-weight: bold;
 }
 
 .gestion i {
     font-size: 30px;
+    color: var(--primary);
     margin: 0;
 }
 
@@ -92,44 +102,69 @@ body.dark-mode {
     font-size: 15px;
 }
 
-.buscador button {
-    background:#0F172A;
-    color: #FFFFFF;
-    border-radius: 15px;
-    border: none;
+.buscador .btn-gestion {
+    background-color: var(--primary);
+    color: var(--bg-card);
+    border-radius: 8px;
+    border: 1px solid transparent;
     width: 150px;
     height: 50px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.buscador button:hover {
-    background:rgb(156, 178, 198);
-    color: #0F172A;
+.buscador .btn-gestion:hover {
+    background-color: var(--bg-main-tr);
+    color: var(--bg-card);
+    border-color: var(--bg-card);
+    transform: translateX(-8px);
+    box-shadow: 5px 5px 20px rgb(0, 0, 0);
 }
 
-/*tabla */
+/* tabla */
 .tabla-responsive {
-    width: 90%;
-    margin: 30px auto;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
 }
 
 .table {
     width: 100%;
-    margin: 30px auto;
+    margin: 0;
+    color: var(--text);
+    border-color: var(--border-color);
+    vertical-align: middle;
 }
 
 .table thead th {
-    background-color: #293349;
+    background-color: var(--primary);
     color: white;
-    text-align: center
+    text-align: center;
+    padding: 15px 12px;
+    white-space: nowrap;
+    border-color: var(--primary);
 }
 
 .table td {
     text-align: center;
-    margin: 0;
+    padding: 14px 12px;
+    background-color: transparent;
 }
 
 .table tbody th {
     text-align: center;
+    padding: 14px 12px;
+    background-color: transparent;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    color: var(--text);
+    background-color: var(--bg-main-tr);
+}
+
+.table-hover > tbody > tr:hover > * {
+    color: var(--text);
+    background-color: var(--primary-tr);
 }
 
 .activo {
@@ -146,30 +181,7 @@ body.dark-mode {
     border-radius: 20px;
 }
 
-.btn-estadisticas{
-    display: flex;
-    justify-content: center;
-}
-.btn-estadisticas button{
-    background:#0F172A;
-    color: #FFFFFF;
-    border-radius: 15px;
-    border: none;
-    width: 300px;
-    height: 50px;
-    margin: 30px;
-}
-
-.btn-estadisticas button:hover {
-    background:rgb(156, 178, 198);
-    color: #0F172A;
-}
-
 @media (max-width: 991px) {
-    .tabla-responsive {
-        overflow-x: auto;
-    }
-
     .conteiner-gestion {
         flex-direction: column;
         align-items: stretch;
@@ -182,7 +194,7 @@ body.dark-mode {
     }
 
     .buscador .navbar,
-    .buscador button {
+    .buscador .btn-gestion {
         width: 100%;
     }
 }

@@ -3,14 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="../styles/gestion.css">
     <link rel="stylesheet" href="../styles/principal.css">
-
+    <link rel="stylesheet" href="../styles/gestion.css">
 </head>
 
 <body>
@@ -18,7 +17,7 @@
         <div class="content">
             <div class="menu container">
                 <div class="marca">
-                    <a href="index.html" class="logo">
+                    <a href="../index.html" class="logo">
                         <img src="../assets/img/Logo.png" alt="Logo de TizaDigital">
                     </a>
                     <span class="nombre-proyecto">TizaDigital</span>
@@ -33,7 +32,7 @@
                         <li><a href="">Contacto</a></li>
                         <li><a href="">Acerca de Nosotros</a></li>
                         <li><a href="../Pages/login.html">Login y Registro</a></li>
-
+                        <li><a href="./gestion.html">Gestión</a></li>
                     </ul>
                 </nav>
             </div>
@@ -44,6 +43,7 @@
             <nav>
                 <a href=""><i class="fa-solid fa-arrow-left"></i>Gestión</a>
             </nav>
+            <p>Administración de docentes y cursos</p>
         </section>
         <section class="gestion">
             <article class="conteiner-gestion">
@@ -67,7 +67,7 @@
             </article>
             <article class="tabla-docentes">
                 <div class="tabla-responsive">
-                    <table class="table">
+                    <table class="table table-striped table-hover">
                         <thead>
                             <tr>
                                 <th scope="col">Nombre</th>
@@ -127,7 +127,7 @@
             </article>
             <article class="tabla-cursos">
                 <div class="tabla-responsive">
-                    <table class="table">
+                    <table class="table table-striped table-hover">
                         <thead>
                             <tr>
                                 <th scope="col">Curso</th>
@@ -163,9 +163,6 @@
                     </table>
                 </div>
             </article>
-        </section>
-        <section class="btn-estadisticas">
-            <nav> <a href=""><button>Ver Estadísticas</button></a></nav>
         </section>
     </main>
 

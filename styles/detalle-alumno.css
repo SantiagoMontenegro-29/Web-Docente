@@ -8,7 +8,7 @@ body.dark-mode {
 
 .detalle-alumno-main {
     flex: 1;
-    padding: 35px 20px 50px;
+    padding: 0 0 50px;
 }
 
 .detalle-alumno-contenido {
@@ -18,36 +18,6 @@ body.dark-mode {
 .titulo-alumno {
     position: relative;
     margin-bottom: 28px;
-    padding: 40px 30px;
-    color: white;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 12px;
-    background: linear-gradient(120deg, #1c382c, #2A4D3E, #597961);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.45);
-}
-
-.titulo-alumno a {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.titulo-alumno a i {
-    position: absolute;
-    left: 0;
-    font-size: 28px;
-}
-
-.titulo-alumno p {
-    margin: 0;
-    font-size: 17px;
 }
 
 .detalle-alumno-contenido > .card {
@@ -149,19 +119,7 @@ body.dark-mode {
 
 @media (max-width: 767px) {
     .detalle-alumno-main {
-        padding: 25px 16px 40px;
-    }
-
-    .titulo-alumno {
-        padding: 30px 20px;
-    }
-
-    .titulo-alumno a {
-        font-size: 29px;
-    }
-
-    .titulo-alumno a i {
-        font-size: 23px;
+        padding: 0 0 40px;
     }
 
     .detalle-alumno-contenido .card-header,

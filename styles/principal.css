@@ -60,10 +60,25 @@ body {
     right: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     z-index: 1000;
+    padding: 0 20px;
+}
 
+.menu .navbar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
 }
 
 .logo {
@@ -71,10 +86,14 @@ body {
 }
 
 .logo img {
-    height: 50px;
+    height: 60px;
 }
 
 .marca {
+    position: absolute;
+    left: -350px;
+    top: 10px;
+    z-index: 1001;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -98,22 +117,17 @@ body {
     z-index: 1000;
 }
 
-.menu .navbar ul {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-}
-
 .menu .navbar ul li a {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
+    padding: 8px 12px;
     border-radius: 8px;
-    margin: 5px;
+    margin: 3px;
     color: var(--bg-main);
     display: block;
     font-weight: bold;
     text-decoration: none;
+    white-space: nowrap;
     transition: 0.3s;
     border: 1px solid #0f172a00;
 }
@@ -139,6 +153,87 @@ body {
 .menu label {
     cursor: pointer;
     display: none;
+}
+
+/* ================= ANIMACIÓN DE TRANSICIÓN ENTRE PÁGINAS ================= */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: slideInUp 0.5s ease-out forwards;
+}
+
+.titulo-detalle,
+.titulo-cursos,
+.titulo-portafolio,
+.titulo-estadisticas,
+.titulo-alumno,
+.titulo-registro,
+#titulo-not{
+    max-width: 1100px;
+    margin: 0 auto 25px;
+    padding: 40px 30px;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.titulo-detalle h2,
+.titulo-cursos h2,
+.titulo-portafolio h2,
+.titulo-estadisticas h2,
+.titulo-alumno h2,
+.titulo-registro h2,
+#titulo-not h2{
+    margin-bottom: 10px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.titulo-detalle p,
+.titulo-cursos p,
+.titulo-portafolio p,
+.titulo-estadisticas p,
+.titulo-alumno p,
+.titulo-registro p,
+#titulo-not p{
+    margin: 0;
+    font-size: 18px;
+    color: #e3eee4;
+}
+
+
+.titulo-detalle nav a,
+.titulo-alumno a,
+.titulo-registro a {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.titulo-detalle nav a i,
+.titulo-alumno a i,
+.titulo-registro a i {
+    position: absolute;
+    left: 0;
+    font-size: 28px;
 }
 
 /* footer */
@@ -225,7 +320,7 @@ footer {
 
 /* Reponsive 
 pantallas medianas*/
-@media (max-width:1150px) {
+@media (max-width:1300px) {
     .content {
         min-height: 90px;
     }
@@ -233,10 +328,17 @@ pantallas medianas*/
     .menu {
         top: 0;
         padding: 20px;
+        justify-content: space-between;
+    }
+
+    .menu .marca {
+        position: static;
+        transform: none;
     }
 
     .menu label {
         display: initial;
+        margin-left: auto;
     }
 
     .menu .navbar {
@@ -273,6 +375,29 @@ pantallas medianas*/
 /* Reponsive  
 pantallas Pequeñas*/
 @media (max-width:767px) {
+    .titulo-detalle h2,
+    .titulo-cursos h2,
+    .titulo-portafolio h2,
+    .titulo-estadisticas h2,
+    .titulo-alumno h2,
+    .titulo-registro h2 {
+        font-size: 30px;
+    }
+
+    .titulo-detalle p,
+    .titulo-cursos p,
+    .titulo-portafolio p,
+    .titulo-estadisticas p,
+    .titulo-alumno p,
+    .titulo-registro p {
+        font-size: 16px;
+    }
+
+    .titulo-detalle nav a,
+    .titulo-alumno a,
+    .titulo-registro a {
+        font-size: 30px;
+    }
 
     .footer-links {
         width: 100%;

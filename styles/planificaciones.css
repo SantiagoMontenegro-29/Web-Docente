@@ -35,26 +35,6 @@ body {
     background-attachment: fixed;
 }
 
-/* titulo */
-.titulo-detalle {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 20px;
-}
-
-.titulo-detalle nav a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: bold;
-    color: black;
-}
-
-.titulo-detalle nav a i {
-    font-size: 20px;
-}
-
 /* tarjeta de planificaciones */
 .planificaciones {
     padding: 20px;

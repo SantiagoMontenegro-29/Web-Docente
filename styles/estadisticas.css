@@ -1,26 +1,228 @@
-html,
-body {
-    height: 100%;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --bg-main: #f0f2f5;
+    --bg-main-tr: #aeaba67d;
+    --bg-main2: #676766;
+    --bg-main2-tr: #6767667f;
+    --bg-main3: #3d3d3d;
+    --bg-main3-tr: #3d3d3d7e;
+    --bg-card: #FFFFFF;
+    --bg-card-tr: #ffffff7e;
+    --primary: #2A4D3E;
+    --primary-hover: #1e372c;
+    --primary-tr: #2a4d3e7d;
+    --text: #1C2826;
+    --border-color: #dcdcdc;
+}
+
+body.dark-mode {
+    --bg-main: #0F172A;
+    --bg-card: #1E293B;
+    --bg-card-tr: #1e293bcc;
+    --primary: #38BDF8;
+    --primary-hover: #0284c7;
+    --text: #F8FAFC;
+    --border-color: #334155;
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-
     background-image: url(../assets/img/fondo.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 main {
     flex: 1;
-
 }
-.card img {
+
+.text-center {
+    text-align: center;
+}
+
+/* Main */
+.estadisticas-main {
+    padding: 25px 20px 50px;
+}
+
+
+.estadisticas-contenedor {
+    max-width: 1200px;
+    margin: 24px auto 0;
+    padding: 0 20px;
+}
+
+.estadisticas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.estadistica-col {
+    width: 25%;
+    padding: 10px;
+}
+
+.grafico-col {
+    width: 50%;
+    padding: 10px;
+}
+
+/* Tarjetas */
+.card {
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+    color: var(--text);
+    background-color: var(--bg-card-tr);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateX(-8px);
+    box-shadow: 15px 0 25px rgba(0, 0, 0, 0.644);
+}
+
+/* Tarjetas superiores con fondo verde primary */
+.estadistica-col .card {
+    background-color: var(--primary);
+    color: white;
+}
+
+.estadistica-col .card-body h5 {
+    color: white;
+}
+
+.estadistica-col .card-body h2 {
+    color: white;
+}
+
+.estadistica-col .icono-estadistica {
+    background-color: white;
+}
+
+.estadistica-col .icono-estadistica i {
+    color: var(--primary);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 18px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-body h5 {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: var(--text);
+}
+
+.card-body h2 {
+    margin: 0;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* Iconos circulares */
+.icono-estadistica {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.icono-estadistica i {
+    font-size: 40px;
+    color: white;
+}
+
+/* Tarjetas de gráficos */
+.card-header {
+    padding: 15px 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--primary);
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+}
+
+.card-header h5 {
+    margin: 0;
+}
+
+.grafico-col .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.grafico-col .card-body {
+    flex: 1;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 0 0 12px 12px;
+}
+
+.grafico-col .card-body img {
     width: 100%;
-    height: 280px;
-    object-fit: contain;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsive (reemplaza col-md-* de Bootstrap) */
+@media (max-width: 992px) {
+    .estadistica-col {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .estadisticas-main {
+        padding: 20px 16px 40px;
+    }
+
+    .estadisticas-contenedor {
+        padding: 0 10px;
+    }
+
+    .estadistica-col,
+    .grafico-col {
+        width: 100%;
+    }
+
+    .icono-estadistica {
+        width: 65px;
+        height: 65px;
+    }
+
+    .icono-estadistica i {
+        font-size: 32px;
+    }
+
+    .grafico-col .card-body img {
+        min-height: 220px;
+    }
 }
