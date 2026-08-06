@@ -1,0 +1,205 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+}
+
+main{
+    padding:40px 20px;
+}
+
+.contacto{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    background:#fff;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.contacto h1{
+    text-align:center;
+    color:#2A4D3E;
+    margin-bottom:20px;
+    font-size:40px;
+}
+
+
+.introduccion{
+    text-align:center;
+    color:#050505;
+    line-height:1.8;
+    margin-bottom:35px;
+    font-size:22px;
+}
+
+.informacion{
+    margin-bottom:40px;
+}
+
+.informacion h2{
+    color:#2A4D3E;
+    margin-bottom:20px;
+    border-left:5px solid #2A4D3E;
+    padding-left:10px;
+}
+
+.datos p{
+    margin-bottom:14px;
+    color:#444;
+    font-size:17px;
+}
+
+.datos i{
+    width:28px;
+    color:#2A4D3E;
+}
+
+.formulario h2{
+    color:#2A4D3E;
+    margin-bottom:20px;
+    border-left:5px solid #2A4D3E;
+    padding-left:10px;
+}
+
+.formulario{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.formulario input,
+.formulario textarea{
+
+    width:100%;
+    padding:14px;
+
+    border:1px solid #cfcfcf;
+    border-radius:8px;
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+.formulario input:focus,
+.formulario textarea:focus{
+
+    border-color:#2A4D3E;
+
+    box-shadow:0 0 8px rgba(42,77,62,.25);
+}
+
+.formulario textarea{
+
+    resize:vertical;
+
+    min-height:150px;
+}
+
+.formulario button{
+
+    width:220px;
+
+    padding:14px;
+
+    background:#2A4D3E;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    transition:.3s;
+}
+
+.formulario button:hover{
+
+    background:#1d372d;
+}
+/* ===========================
+   Tablets
+   =========================== */
+
+@media (max-width:992px){
+
+    .contacto{
+
+        width:95%;
+
+        padding:30px;
+    }
+
+    .contacto h1{
+
+        font-size:30px;
+    }
+
+    .informacion h2,
+    .formulario h2{
+
+        font-size:24px;
+    }
+
+}
+
+/* ===========================
+   Celulares
+   =========================== */
+
+@media (max-width:576px){
+
+    main{
+
+        padding:20px 10px;
+    }
+
+    .contacto{
+
+        width:100%;
+
+        padding:20px;
+    }
+
+    .contacto h1{
+
+        font-size:26px;
+    }
+
+    .introduccion{
+
+        font-size:15px;
+
+        text-align:justify;
+    }
+
+    .datos p{
+
+        font-size:15px;
+    }
+
+    .formulario input,
+    .formulario textarea{
+
+        font-size:15px;
+    }
+
+    .formulario button{
+
+        width:100%;
+    }
+
+}
