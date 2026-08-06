@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+}
+
+.container{
+    width:90%;
+    max: width 1200px;
+    margin:10px auto;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    color:#2A4D3E;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+thead{
+    background:#2A4D3E;
+    color:#fff;
+}
+
+th,
+td{
+    padding:15px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+tbody tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+tbody tr:hover{
+    background:#e8f2ed;
+    transition:.3s;
+}
+
+th{
+    font-size:20px;
+}
+
+td{
+    font-size:20px;
+}
+
+td:last-child{
+    text-align:left;
+}
+
+main{
+    flex: 1;
+    padding: 40px 0;
+}
+/* ===========================
+   Pantallas medianas
+   =========================== */
+@media (max-width: 992px){
+
+    .container{
+        width:95%;
+    }
+
+    h1{
+        font-size:28px;
+        text-align:center;
+        margin-bottom:20px;
+    }
+
+    table{
+        display:block;
+        width:100%;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    th,
+    td{
+        padding:12px;
+        font-size:15px;
+    }
+
+}
+
+/* ===========================
+   Pantallas pequeñas
+   =========================== */
+@media (max-width: 576px){
+
+    .container{
+        width:98%;
+    }
+
+    h1{
+        font-size:22px;
+        margin-bottom:18px;
+    }
+
+    table{
+        display:block;
+        width:100%;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    th,
+    td{
+        padding:10px;
+        font-size:14px;
+    }
+
+}
