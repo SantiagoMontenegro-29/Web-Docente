@@ -1,69 +1,111 @@
-* {
-    padding: 0;
+
+/* ================= ESTADISTICAS ================= */
+.estadisticas-cursos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 22px 20px;
+    background-color: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 12px;
+    box-shadow: 0 24 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.stat-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+.stat-item i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    color: white;
+    font-size: 24px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
+    box-shadow: 0 4px 10px rgba(42, 77, 62, 0.3);
+}
+
+.stat-item h4 {
     margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+    color: var(--primary);
+    font-size: 26px;
+    font-weight: bold;
 }
 
-:root {
-    --bg-main: #aeaba6;
-    --bg-main-tr: #aeaba67d;
-    --bg-main2: #676766;
-    --bg-main2-tr: #6767667f;
-    --bg-main3: #3d3d3d;
-    --bg-main3-tr: #222222ab;
-    --bg-card: #FFFFFF;
-    --bg-card-tr: #ffffff7e;
-    --primary: #2A4D3E;
-    --primary-tr: #2a4d3e7d;
-    --text: #1C2826;
+.stat-item p {
+    margin: 0;
+    color: #59635b;
+    font-size: 14px;
 }
 
-body.dark-mode {
-    --bg-main: #0F172A;
-    --bg-card: #1E293B;
-    --primary: #2A4D3E;
-    --text: #F8FAFC;
-}
-
-body {
-    background-image: url(../assets/img/fondo.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-/* Main */
-.titulo-cursos {
-    margin-bottom: 25px;
-}
-
+/* ================= CURSOS ================= */
 .card-cursos {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
     padding: 30px;
 }
 
-.card {
-    width: 15rem;
-    border-radius: 8px;
-    transition: 0.4s;
-}
-.card:hover{
-    transition: 0.5s;
-    transform: translateX(-8px);
-    box-shadow: 15px 0px 25px rgba(0, 0, 0, 0.644);
+.card-cursos .card {
+    width: 20rem;
+    border: none;
+    border-radius: 24;
+    overflow: hidden;
+    box-shadow: 0 5px 32px rgba(0, 0, 0, 0.699);
+    transition: 0.8s;
 }
 
-.card img{
-    border-radius: 8px;
+.card-cursos .card:hover {
+    transform: translateY(-15px);
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+.card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
     width: 100%;
     height: 220px;
     object-fit: cover;
+    transition: 1s;
+}
+
+.card:hover img {
+    transform: scale(1.2);
+}
+
+.badge-curso {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 14px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .card-body {
@@ -71,60 +113,139 @@ body {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 24;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.card-body .btn {
-    display: flex;
-    justify-content: center;
-    border-radius: 8px;
-    background-color: var(--primary);
-    color: var(--bg-card);
-    font-size: 20px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid #0f172a00;
-    transition: 0.3s;
-}
-
-.card-body .btn:hover {
-    background-color: var(--bg-main-tr);
-    color: var(--bg-card);
-    transition: 0.5s;
-    transform: translateX(-8px);
-    box-shadow: 5px 5px 20px rgb(0, 0, 0);
-    backdrop-filter:blur(4px) ;
-    border:1px solid var(--bg-card)
-}
-
-.card-text {
-    background-color: var(--primary);
-    border-radius: 8px;
-    width: 55px;
-    text-align: center;
-    color: var(--bg-card);
+    padding: 22px;
 }
 
 .card-title {
+    color: var(--primary);
+    font-size: 22px;
     font-weight: bold;
 }
 
 .logo-alum {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 24;
+    margin-top: 10px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background-color: #e1eee3;
 }
 
 .logo-alum i {
     display: flex;
     justify-content: center;
-    color: #2A4D3E;
-    font-size: 20px;
+    color: var(--primary);
+    font-size: 18px;
     line-height: 1;
     margin: 0;
 }
 
 .logo-alum p {
     margin: 0;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Tags de materias */
+.tags-curso {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24;
+    margin: 14px 0 18px;
+}
+
+.tags-curso span {
+    padding: 5px 12px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: #e1eee3;
+    border: 1px solid #c8dec9;
+}
+
+.tags-curso span i {
+    margin-right: 5px;
+}
+
+/* Botón */
+.card-body .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    width: auto;
+    padding: 20px 25px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.678);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+    transition: transform 0.8s, border-radius 0.8s, letter-spacing 0.8s;
+}
+
+.card-body .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6f9276, #29362b);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.8s;
+}
+
+.card-body .btn i {
+    transition: 0.8s;
+}
+
+.card-body .btn:hover {
+    transform: translateY(-8px);
+    letter-spacing: 1px;
+    border-radius: 45px;
+}
+
+.card-body .btn:hover::before {
+    opacity: 1;
+}
+
+.card-body .btn:hover i {
+    transform: translateX(4px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+    .estadisticas-cursos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .estadisticas-cursos {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .stat-item {
+        justify-content: center;
+    }
+
+    .card-cursos {
+        padding: 15px;
+        gap: 20px;
+    }
 }

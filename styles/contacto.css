@@ -10,28 +10,57 @@ body{
 }
 
 main{
-    padding:40px 20px;
+    flex:1;    
+    animation: slideInUp 0.5s ease-out forwards;
+
 }
 
-.contacto{
+
+/* =====================================
+   TITULO CONTACTO
+   ===================================== */
+
+main .titulo-contacto{
     width:90%;
     max-width:1100px;
-    margin:auto;
+    margin:0 auto 25px;
+    padding:40px 30px;
+    color:white;
+    text-align:center;
+    font-family:Arial, Helvetica, sans-serif;
+    border-radius:20px;
+    background:linear-gradient(135deg, #2A4D3E, #29362b);
+    box-shadow:0 10px 20px rgba(0,0,0,.4);
+}
+
+main .titulo-contacto h2{
+    margin:0 0 10px;
+    font-size:50px;
+    font-weight:bold;
+    color:white;
+}
+
+
+/* =====================================
+   CONTENEDOR PRINCIPAL
+   ===================================== */
+
+main .contacto{
+    width:90%;
+    max-width:1100px;
+    margin:0 auto;
     background:#fff;
     padding:40px;
     border-radius:12px;
     box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
-.contacto h1{
-    text-align:center;
-    color:#2A4D3E;
-    margin-bottom:20px;
-    font-size:40px;
-}
 
+/* =====================================
+   INTRODUCCION
+   ===================================== */
 
-.introduccion{
+main .introduccion{
     text-align:center;
     color:#050505;
     line-height:1.8;
@@ -39,96 +68,154 @@ main{
     font-size:22px;
 }
 
-.informacion{
+
+/* =====================================
+   INFORMACION DE CONTACTO
+   ===================================== */
+
+main .informacion{
     margin-bottom:40px;
 }
 
-.informacion h2{
+main .informacion h2{
     color:#2A4D3E;
-    margin-bottom:20px;
+    margin:0 0 20px;
     border-left:5px solid #2A4D3E;
     padding-left:10px;
+    font-size:28px;
+    font-weight:bold;
 }
 
-.datos p{
+main .datos p{
     margin-bottom:14px;
     color:#444;
-    font-size:17px;
+    font-size:18px;
+    line-height:1.5;
 }
 
-.datos i{
+main .datos i{
     width:28px;
     color:#2A4D3E;
 }
 
-.formulario h2{
-    color:#2A4D3E;
-    margin-bottom:20px;
-    border-left:5px solid #2A4D3E;
-    padding-left:10px;
-}
 
-.formulario{
+/* =====================================
+   FORMULARIO
+   ===================================== */
+
+main .formulario{
     display:flex;
     flex-direction:column;
     gap:18px;
 }
 
-.formulario input,
-.formulario textarea{
+main .formulario h2{
+    color:#2A4D3E;
+    margin:0 0 2px;
+    border-left:5px solid #2A4D3E;
+    padding-left:10px;
+    font-size:28px;
+    font-weight:bold;
+}
 
+main .formulario input,
+main .formulario textarea{
     width:100%;
     padding:14px;
-
     border:1px solid #cfcfcf;
     border-radius:8px;
-
     outline:none;
-
     font-size:16px;
-
+    background:#fff;
+    color:#333;
     transition:.3s;
 }
 
-.formulario input:focus,
-.formulario textarea:focus{
-
+main .formulario input:focus,
+main .formulario textarea:focus{
     border-color:#2A4D3E;
-
     box-shadow:0 0 8px rgba(42,77,62,.25);
 }
 
-.formulario textarea{
-
+main .formulario textarea{
     resize:vertical;
-
     min-height:150px;
 }
 
-.formulario button{
 
+/* =====================================
+   BOTON ENVIAR
+   ===================================== */
+
+main .formulario button{
+    display:block;
     width:220px;
-
+    margin:5px 0 0;
     padding:14px;
 
-    background:#2A4D3E;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
 
-    color:white;
+    color:#fff;
 
     border:none;
 
-    border-radius:8px;
+    border-radius:15px;
 
     cursor:pointer;
-
     font-size:17px;
 
-    transition:.3s;
+    font-weight: bold;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
+
+    position: relative;
+
+    overflow: hidden;
+
+    z-index: 1;
+
+    white-space: nowrap;
+
+    transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
+}
+
+.formulario button::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: linear-gradient(135deg, #6f9276, #29362b);
+
+    opacity: 0;
+
+    z-index: -1;
+
+    transition: opacity 0.8s;
 }
 
 .formulario button:hover{
 
-    background:#1d372d;
+    transform: translateY(-10px);
+
+    letter-spacing: 2px;
+
+    border-radius: 45px;
+}
+
+.formulario button:hover::before{
+
+    opacity: 1;
 }
 /* ===========================
    Tablets
@@ -136,70 +223,116 @@ main{
 
 @media (max-width:992px){
 
-    .contacto{
+    main{
+        padding:30px 15px;
+    }
 
+    main .titulo-contacto{
         width:95%;
+        padding:30px 20px;
+    }
 
+    main .titulo-contacto h2{
+        font-size:40px;
+    }
+
+    main .contacto{
+        width:95%;
         padding:30px;
     }
 
-    .contacto h1{
-
-        font-size:30px;
+    main .introduccion{
+        font-size:19px;
     }
 
-    .informacion h2,
-    .formulario h2{
-
+    main .informacion h2,
+    main .formulario h2{
         font-size:24px;
     }
 
+    main .datos p{
+        font-size:16px;
+    }
+
+    main .formulario button{
+        width:220px;
+    }
 }
 
-/* ===========================
-   Celulares
-   =========================== */
+
+/* =====================================
+   CELULARES
+   ===================================== */
 
 @media (max-width:576px){
 
     main{
-
         padding:20px 10px;
     }
 
-    .contacto{
-
+    main .titulo-contacto{
         width:100%;
-
-        padding:20px;
+        padding:25px 15px;
+        margin-bottom:20px;
     }
 
-    .contacto h1{
-
-        font-size:26px;
+    main .titulo-contacto h2{
+        font-size:30px;
     }
 
-    .introduccion{
+    main .contacto{
+        width:100%;
+        padding:20px 15px;
+        border-radius:10px;
+    }
 
+    main .introduccion{
         font-size:15px;
-
+        line-height:1.7;
         text-align:justify;
+        margin-bottom:25px;
     }
 
-    .datos p{
+    main .informacion{
+        margin-bottom:30px;
+    }
 
+    main .informacion h2,
+    main .formulario h2{
+        font-size:20px;
+        line-height:1.4;
+    }
+
+    main .datos p{
+        display:flex;
+        align-items:flex-start;
         font-size:15px;
+        line-height:1.6;
+        margin-bottom:12px;
     }
 
-    .formulario input,
-    .formulario textarea{
+    main .datos i{
+        flex-shrink:0;
+        margin-right:8px;
+    }
 
+    main .formulario{
+        gap:14px;
+    }
+
+    main .formulario input,
+    main .formulario textarea{
         font-size:15px;
+        padding:12px;
     }
 
-    .formulario button{
+    main .formulario textarea{
+        min-height:130px;
+    }
 
+    main .formulario button{
         width:100%;
+        padding:13px;
+        margin-top:5px;
     }
-
 }

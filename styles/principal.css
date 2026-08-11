@@ -91,7 +91,7 @@ body {
 
 .marca {
     position: absolute;
-    left: -350px;
+    left: -300px;
     top: 10px;
     z-index: 1001;
     display: flex;
@@ -120,26 +120,45 @@ body {
 .menu .navbar ul li a {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 8px 12px;
-    border-radius: 8px;
+    padding: 8px 16px;
+    border-radius: 15px;
     margin: 3px;
-    color: var(--bg-main);
+    color: #fff;
     display: block;
     font-weight: bold;
     text-decoration: none;
     white-space: nowrap;
-    transition: 0.3s;
-    border: 1px solid #0f172a00;
+    border: none;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
+}
+
+.menu .navbar ul li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6f9276, #29362b);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.8s;
 }
 
 .menu .navbar ul li a:hover {
-    color: #ffffff;
-    background-color: var(--bg-main-tr);
-    border-radius: 8px;
-    transform: translateX(-8px);
-    transition: 0.5s;
-    box-shadow: 5px 5px 20px rgb(0, 0, 0);
-    border:1px solid var(--bg-card)
+    transform: translateY(-8px);
+    letter-spacing: 2px;
+    border-radius: 45px;
+    color: #fff;
+}
+
+.menu .navbar ul li a:hover::before {
+    opacity: 1;
 }
 
 #menu {
@@ -177,6 +196,10 @@ main {
 .titulo-estadisticas,
 .titulo-alumno,
 .titulo-registro,
+.titulo-asistencia,
+.titulo-boletines,
+.titulo-contacto,
+.titulo-nosotros,
 #titulo-not{
     max-width: 1100px;
     margin: 0 auto 25px;
@@ -195,6 +218,10 @@ main {
 .titulo-estadisticas h2,
 .titulo-alumno h2,
 .titulo-registro h2,
+.titulo-asistencia,
+.titulo-boletines,
+.titulo-contacto,
+.titulo-nosotros,
 #titulo-not h2{
     margin-bottom: 10px;
     font-size: 50px;
@@ -207,6 +234,10 @@ main {
 .titulo-estadisticas p,
 .titulo-alumno p,
 .titulo-registro p,
+.titulo-asistencia
+.titulo-boletines,
+.titulo-contacto,
+.titulo-nosotros,
 #titulo-not p{
     margin: 0;
     font-size: 18px;
@@ -254,6 +285,8 @@ footer {
 
 .footer-row {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -291,25 +324,6 @@ footer {
     color: var(--primary);
     padding-left: 8px;
     transition: 0.6;
-}
-
-.sociales-link a {
-    display: inline-block;
-    min-height: 40px;
-    width: 40px;
-    background-color: var(--primary-tr);
-    margin: 0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: var(--bg-card);
-    transition: 1s;
-}
-
-.sociales-link a:hover {
-    background-color: var(--bg-main-tr);
-    transition: 1s;
-    transform: scale(1.4);
 }
 
 #texfooter {
@@ -370,6 +384,11 @@ pantallas medianas*/
         width: 50%;
         margin-bottom: 30px;
     }
+        .marca {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /* Reponsive  
@@ -380,7 +399,8 @@ pantallas Pequeñas*/
     .titulo-portafolio h2,
     .titulo-estadisticas h2,
     .titulo-alumno h2,
-    .titulo-registro h2 {
+    .titulo-registro h2
+    .titulo-asistencia {
         font-size: 30px;
     }
 
@@ -389,7 +409,9 @@ pantallas Pequeñas*/
     .titulo-portafolio p,
     .titulo-estadisticas p,
     .titulo-alumno p,
-    .titulo-registro p {
+    .titulo-asistencia,
+    .titulo-registro p
+    .titulo-asistencia {
         font-size: 16px;
     }
 
@@ -402,5 +424,10 @@ pantallas Pequeñas*/
     .footer-links {
         width: 100%;
         margin-bottom: 30px;
+    }
+    .marca {
+        display:flex;
+        justify-content: center;
+        align-items: center;
     }
 }

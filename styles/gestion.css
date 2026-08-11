@@ -49,17 +49,82 @@ main {
     flex: 1;
 }
 
-/* Gestión */
+/* ================= ESTADISTICAS ================= */
+.estadisticas-gestion {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 22px 20px;
+    background-color: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.stat-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+.stat-item i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    color: white;
+    font-size: 24px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
+    box-shadow: 0 4px 10px rgba(42, 77, 62, 0.3);
+}
+
+.stat-item h4 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.stat-item p {
+    margin: 0;
+    color: #59635b;
+    font-size: 14px;
+}
+
+/* ================= GESTION ================= */
 .gestion {
     max-width: 1100px;
     margin: 0 auto 30px;
-    padding: 20px;
+    padding: 25px;
     color: var(--text);
-    background-color: var(--bg-card-tr);
-    border: 1px solid var(--bg-card);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.gestion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #2A4D3E, #6f9276);
 }
 
 .conteiner-gestion {
@@ -75,7 +140,21 @@ main {
 .titulo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+}
+
+.titulo i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    color: white;
+    font-size: 22px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
+    box-shadow: 0 4px 10px rgba(42, 77, 62, 0.3);
 }
 
 .gestion h2 {
@@ -83,12 +162,6 @@ main {
     font-size: 25px;
     color: var(--primary);
     font-weight: bold;
-}
-
-.gestion i {
-    font-size: 30px;
-    color: var(--primary);
-    margin: 0;
 }
 
 /* buscador y botón */
@@ -103,23 +176,64 @@ main {
     font-size: 15px;
 }
 
+.buscador .input-group-text {
+    background-color: #e1eee3;
+    border: 1px solid #c8dec9;
+    color: var(--primary);
+}
+
+.buscador .form-control {
+    border: 1px solid #c8dec9;
+    border-radius: 0 8px 8px 0;
+}
+
+.buscador .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(42, 77, 62, 0.15);
+}
+
 .buscador .btn-gestion {
-    background-color: var(--primary);
-    color: var(--bg-card);
-    border-radius: 8px;
-    border: 1px solid transparent;
-    width: 150px;
+    width: auto;
+    min-width: 160px;
     height: 50px;
+    padding: 0 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    color: #fff;
+    font-size: 16px;
     font-weight: bold;
-    transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+    transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
+}
+
+.buscador .btn-gestion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6f9276, #29362b);
+    color: #fff;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.8s;
 }
 
 .buscador .btn-gestion:hover {
-    background-color: var(--bg-main-tr);
-    color: var(--bg-card);
-    border-color: var(--bg-card);
-    transform: translateX(-8px);
-    box-shadow: 5px 5px 20px rgb(0, 0, 0);
+    transform: translateY(-10px);
+    letter-spacing: 2px;
+    border-radius: 45px;
+}
+
+.buscador .btn-gestion:hover::before {
+    opacity: 1;
 }
 
 /* tabla */
@@ -138,7 +252,7 @@ main {
 }
 
 .table thead th {
-    background-color: var(--primary);
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
     color: white;
     text-align: center;
     padding: 15px 12px;
@@ -156,30 +270,43 @@ main {
     text-align: center;
     padding: 14px 12px;
     background-color: transparent;
+    color: var(--primary);
+    font-weight: bold;
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) > * {
     color: var(--text);
-    background-color: var(--bg-main-tr);
+    background-color: #ecf5ed;
 }
 
 .table-hover > tbody > tr:hover > * {
     color: var(--text);
-    background-color: var(--primary-tr);
+    background-color: #d7e5d9;
 }
 
 .activo {
     background-color: #d4edda;
-    color: green;
-    padding: 5px 10px;
+    color: #155724;
+    padding: 5px 14px;
     border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
 }
 
 .inactivo {
     background-color: #f8d7da;
     color: #dc3545;
-    padding: 5px 10px;
+    padding: 5px 14px;
     border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+    .estadisticas-gestion {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 991px) {
@@ -197,5 +324,25 @@ main {
     .buscador .navbar,
     .buscador .btn-gestion {
         width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .estadisticas-gestion {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .stat-item {
+        justify-content: center;
+    }
+
+    .gestion {
+        padding: 20px 15px;
+    }
+
+    .gestion::before {
+        width: 100%;
+        height: 6px;
     }
 }

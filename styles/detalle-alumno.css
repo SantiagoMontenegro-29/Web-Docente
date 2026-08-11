@@ -24,23 +24,33 @@ body.dark-mode {
     overflow: hidden;
     margin-top: 22px !important;
     color: var(--text);
-    background-color: var(--bg-card-tr);
-    border: 1px solid var(--bg-card);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    transition: 0.4s;
+    background-color: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: 0.35s;
+}
+
+.detalle-alumno-contenido > .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #2A4D3E, #6f9276);
 }
 
 .detalle-alumno-contenido > .card:hover {
-    transform: translateX(-8px);
-    box-shadow: 15px 0 25px rgba(0, 0, 0, 0.35);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 32px rgba(0, 0, 0, 0.3);
 }
 
 .detalle-alumno-contenido .card-header {
     padding: 16px 24px;
     color: white;
-    background-color: var(--primary);
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
     border: 0;
 }
 
@@ -55,6 +65,7 @@ body.dark-mode {
 
 .detalle-alumno-contenido .card-body p {
     margin-bottom: 12px;
+    color: #4d5950;
 }
 
 .detalle-alumno-contenido .card-body p:last-child {
@@ -71,28 +82,30 @@ body.dark-mode {
     color: var(--text);
     border-color: var(--border-color);
     border-radius: 8px;
-    background-color: var(--bg-card-tr);
+    background-color: rgba(255, 255, 255, 0.94);
 }
 
 .detalle-alumno-contenido .table-dark th {
     color: white;
-    background-color: var(--primary);
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
     border-color: var(--primary);
 }
 
 .detalle-alumno-contenido .table-striped > tbody > tr:nth-of-type(odd) > * {
     color: var(--text);
-    background-color: var(--bg-main-tr);
+    background-color: #ecf5ed;
 }
 
 .detalle-alumno-contenido .table-hover > tbody > tr:hover > * {
     color: var(--text);
-    background-color: var(--primary-tr);
+    background-color: #d7e5d9;
 }
 
 .detalle-alumno-contenido .badge {
-    padding: 7px 10px;
-    background-color: var(--primary) !important;
+    padding: 7px 14px;
+    background: linear-gradient(135deg, #2A4D3E, #6f9276) !important;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
 .volver-registro {
@@ -100,21 +113,45 @@ body.dark-mode {
 }
 
 .volver-registro .btn {
-    padding: 10px 22px;
-    color: var(--bg-card);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    color: #fff;
     font-weight: bold;
-    background-color: var(--primary);
-    border: 1px solid transparent;
-    border-radius: 8px;
-    transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+    transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
+}
+
+.volver-registro .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6f9276, #29362b);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.8s;
 }
 
 .volver-registro .btn:hover {
-    color: var(--bg-card);
-    background-color: var(--bg-main-tr);
-    border-color: var(--bg-card);
-    transform: translateX(-8px);
-    box-shadow: 5px 5px 20px rgb(0, 0, 0);
+    transform: translateY(-10px);
+    letter-spacing: 2px;
+    border-radius: 45px;
+}
+
+.volver-registro .btn:hover::before {
+    opacity: 1;
 }
 
 @media (max-width: 767px) {
@@ -129,5 +166,10 @@ body.dark-mode {
 
     .detalle-alumno-contenido .card-header h2 {
         font-size: 19px;
+    }
+
+    .detalle-alumno-contenido > .card::before {
+        width: 100%;
+        height: 6px;
     }
 }

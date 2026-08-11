@@ -6,189 +6,327 @@
 }
 
 body{
-    background:#f2f2f2;
+    background-image: url(../assets/img/fondo.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.container{
-    width:90%;
-    max: width 1200px;
-    margin:10px auto;
+/* Título */
+.titulo-boletin {
+    max-width: 1100px;
+    margin: 0 auto 25px;
+    padding: 40px 30px;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
 }
 
-h1{
-    text-align:center;
-    color:#2A4D3E;
-    margin-bottom:30px;
+.titulo-boletin h2 {
+    margin-bottom: 10px;
+    font-size: 50px;
+    font-weight: bold;
 }
 
-.datos-alumno{
-    background:#fff;
-    padding:20px;
-    border-radius:8px;
-    box-shadow:0 3px 8px rgba(0,0,0,.15);
-    margin-bottom:25px;
+.titulo-boletin p {
+    margin: 0;
+    font-size: 18px;
+    color: #e3eee4;
 }
 
-.datos-alumno p{
-    margin:10px 0;
-    color:#333;
+.titulo-boletin .volver {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:#fff;
-    box-shadow:0 3px 8px rgba(0,0,0,.15);
+.titulo-boletin .volver a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: 0.3s;
 }
 
-thead{
-    background:#2A4D3E;
-    color:#fff;
+.titulo-boletin .volver a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
 }
 
-th,
-td{
-    border:1px solid #ddd;
-    padding:15px;
-    text-align:center;
+/* Contenedor */
+.container-boletin {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-tbody tr:nth-child(even){
-    background:#f7f7f7;
+/* Tarjetas */
+.card-boletin {
+    margin-bottom: 25px;
+    background-color: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
 }
 
-tbody tr:hover{
-    background:#edf5f1;
+.card-boletin::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #2A4D3E, #6f9276);
 }
 
-.resumen{
-    margin-top:25px;
-    background:#fff;
-    padding:20px;
-    border-radius:8px;
-    box-shadow:0 3px 8px rgba(0,0,0,.15);
+.card-header-boletin {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    color: white;
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
 }
 
-.resumen p{
-    margin:10px 0;
-    font-size:18px;
+.card-header-boletin i {
+    font-size: 22px;
 }
 
-.boton{
-    display:block;
-    width:220px;
-    margin:30px auto;
-    padding:14px;
-    background:#2A4D3E;
-    color:white;
-    text-decoration:none;
-    text-align:center;
-    border-radius:6px;
-    font-weight:bold;
-    transition:.3s;
+.card-header-boletin h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.boton:hover{
-    background:#1d382d;
+/* Datos del alumno */
+.datos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 24px;
+}
+
+.dato-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    color: var(--primary);
+    border: 1px solid #c8dec9;
+    border-radius: 8px;
+    background-color: #ecf5ed;
+    transition: 0.3s;
+}
+
+.dato-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(42, 77, 62, 0.2);
+}
+
+.dato-item i {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.dato-item p {
+    margin: 0;
+    color: #4d5950;
+    font-size: 15px;
+}
+
+.dato-item strong {
+    color: var(--primary);
+}
+
+/* Tabla */
+.tabla-boletin {
+    padding-bottom: 20px;
+}
+
+.tabla-boletin .table-responsive {
+    padding: 20px 24px 0;
+}
+
+.tabla-boletin table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+}
+
+.tabla-boletin thead {
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
+    color: #fff;
+}
+
+.tabla-boletin th,
+.tabla-boletin td {
+    border: 1px solid #d9ded9;
+    padding: 15px;
+    text-align: center;
+}
+
+.tabla-boletin tbody tr:nth-child(even) {
+    background: #ecf5ed;
+}
+
+.tabla-boletin tbody tr:hover {
+    background: #d7e5d9;
+    transition: .3s;
+}
+
+/* Resumen */
+.resumen-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 24px;
+}
+
+.resumen-item {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px;
+    border: 1px solid #c8dec9;
+    border-radius: 12px;
+    background-color: #ecf5ed;
+    text-align: center;
+}
+
+.resumen-item span {
+    color: #59635b;
+    font-size: 15px;
+}
+
+.resumen-item strong {
+    color: var(--primary);
+    font-size: 28px;
+}
+
+.badge-estado {
+    padding: 6px 18px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
+}
+
+/* Botón */
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 240px;
+    margin: 10px auto 40px;
+    padding: 14px;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+    transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
+}
+
+.boton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6f9276, #29362b);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.8s;
+}
+
+.boton:hover {
+    transform: translateY(-10px);
+    letter-spacing: 2px;
+    border-radius: 45px;
+}
+
+.boton:hover::before {
+    opacity: 1;
 }
 
 main{
     flex: 1;
-    padding: 40px;
+    padding: 40px 0;
 }
+
+
 /* ===========================
-   Pantallas medianas
+   TABLETS
    =========================== */
 @media (max-width: 992px){
-
-    .container{
-        width:95%;
+    .titulo-boletin h2 {
+        font-size: 35px;
     }
 
-    h1{
-        font-size:28px;
-        margin-bottom:20px;
-        text-align:center;
+    .datos-grid {
+        grid-template-columns: 1fr;
     }
-
-    .datos-alumno{
-        margin-bottom:20px;
-    }
-
-    .datos-alumno h4{
-        font-size:18px;
-        margin-bottom:8px;
-    }
-
-    table{
-        display:block;
-        width:100%;
-        overflow-x:auto;
-        white-space:nowrap;
-    }
-
-    th,
-    td{
-        padding:12px;
-        font-size:15px;
-    }
-
-    .resumen{
-        margin-top:20px;
-    }
-
-    .boton{
-        display:block;
-        width:220px;
-        margin:25px auto 0;
-        text-align:center;
-    }
-
 }
 
+
 /* ===========================
-   Pantallas pequeñas
+   CELULARES
    =========================== */
 @media (max-width: 576px){
-
-    .container{
-        width:98%;
+    .titulo-boletin {
+        padding: 30px 20px;
     }
 
-    h1{
-        font-size:22px;
-        margin-bottom:18px;
+    .titulo-boletin h2 {
+        font-size: 28px;
     }
 
-    .datos-alumno h4{
-        font-size:16px;
-        line-height:1.5;
+    .titulo-boletin p {
+        font-size: 15px;
     }
 
-    table{
-        display:block;
-        width:100%;
-        overflow-x:auto;
-        white-space:nowrap;
+    .titulo-boletin .volver {
+        position: static;
+        transform: none;
+        margin-bottom: 15px;
     }
 
-    th,
-    td{
-        padding:10px;
-        font-size:14px;
+    .datos-grid,
+    .resumen-contenido {
+        padding: 18px;
     }
 
-    .resumen p{
-        font-size:15px;
-        margin-bottom:8px;
+    .resumen-item {
+        min-width: 100%;
     }
 
-    .boton{
-        display:block;
-        width:100%;
-        padding:12px;
-        text-align:center;
-        margin-top:20px;
+    .boton {
+        width: 100%;
     }
-
 }

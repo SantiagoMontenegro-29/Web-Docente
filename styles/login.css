@@ -1,48 +1,6 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+*{
+    color: var(--bg-card);
 }
-
-:root {
-    --bg-main: #f0f2f5;
-    --bg-main-tr: #aeaba67d;
-    --bg-main2: #676766;
-    --bg-main2-tr: #6767667f;
-    --bg-main3: #3d3d3d;
-    --bg-main3-tr: #3d3d3d7e;
-    --bg-card: #FFFFFF;
-    --primary: #2A4D3E;
-    --primary-hover: #1e372c;
-    --primary-tr: #2a4d3e7d;
-    --text: #1C2826;
-    --border-color: #dcdcdc;
-}
-
-body.dark-mode {
-    --bg-main: #0F172A;
-    --bg-card: #1E293B;
-    --primary: #38BDF8;
-    --primary-hover: #0284c7;
-    --text: #F8FAFC;
-    --border-color: #334155;
-}
-
-body {
-    background-image: url(../assets/img/fondo.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-
 /* ================= ANIMACIÓN DE TRANSICIÓN ENTRE PÁGINAS ================= */
 @keyframes slideInUp {
     from {
@@ -169,49 +127,103 @@ input::placeholder {
     display: inline-block;
     width: 100%;
     padding: 12px;
-    background-color: var(--bg-main-tr);
-    color: var(--bg-main);
-    border: 1px solid #0f172a00;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
     text-align: center;
-    transition: 0.3s;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+    transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
     margin-top: 10px;
 }
 
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6f9276, #29362b);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.8s;
+}
+
 .btn:hover {
-background-color: var(--bg-main-tr);
-    color: var(--bg-card);
-    transition: 0.5s;
-    transform: translateX(-8px);
-    box-shadow: 5px 5px 20px rgb(0, 0, 0);
-    backdrop-filter:blur(4px) ;
-    border:1px solid var(--bg-card)
+    transform: translateY(-10px);
+    letter-spacing: 2px;
+    border-radius: 45px;
+}
+
+.btn:hover::before {
+    opacity: 1;
 }
 
 #password-olv {
     font-size: 0.9rem;
     text-decoration: none;
     text-align: center;
-    color: var(--bg-main);
-    background-color: var(--bg-main-tr);
+    color: #fff;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
     margin: auto;
-    padding: 10px;
-    border-radius: 8px;
-    transition: 0.3s;
-    border: 1px solid #0f172a00;
+    padding: 10px 14px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+    transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
+    border: none;
+    display: inline-block;
+}
+
+#password-olv::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6f9276, #29362b);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.8s;
 }
 
 #password-olv:hover {
-background-color: var(--bg-main-tr);
-    color: var(--bg-card);
-    transition: 0.5s;
-    transform: translateX(-8px);
-    box-shadow: 5px 5px 20px rgb(0, 0, 0);
-    backdrop-filter:blur(4px) ;
-    border:1px solid var(--bg-card)
+    transform: translateY(-10px);
+    letter-spacing: 2px;
+    border-radius: 45px;
+}
+
+#password-olv:hover::before {
+    opacity: 1;
+}
+
+/* Botones de Google y Microsoft - mantienen su color original */
+.btn-google {
+    background: linear-gradient(135deg, #db4437, #c23321) !important;
+}
+
+.btn-google::before {
+    background: linear-gradient(135deg, #f5675a, #c23321) !important;
+}
+
+.btn-microsoft {
+    background: linear-gradient(135deg, #00a4ef, #0078d4) !important;
+}
+
+.btn-microsoft::before {
+    background: linear-gradient(135deg, #33b9ff, #0078d4) !important;
 }
 
 /* ================= FOOTER ================= */

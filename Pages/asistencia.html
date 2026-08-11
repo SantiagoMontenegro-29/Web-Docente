@@ -29,9 +29,9 @@
                         <li><a href="../index.html">Inicio</a></li>
                         <li><a href="../Pages/cursos.html">Mis Cursos</a></li>
                         <li><a href="./portafolio.html">Mi Portafolio</a></li>
-                        <li><a href="../Pages/contacto.html">Contacto</a></li>
-                        <li><a href="../Pages/nosotros.html">Acerca de nosotros</a></li>
-                        <li><a href="./login.html">Login y Registro</a></li>                        
+                        <li><a href="./login.html">Login y Registro</a></li>
+                        <li><a href="./gestion.html">Gestión</a></li>
+                        
                     </ul>
                 </nav>
             </div>
@@ -39,58 +39,74 @@
     </header>
 
     <main>
-       <div class="container">
-        <h1>Registro de Asistencia</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombre del Alumno</th>
-                    <th>Fecha</th>
-                    <th>Presente</th>
-                    <th>Ausente</th>
-                    <th>Justificado</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Julian Alvarez</td>
-                    <td>31/07/2026</td>
-                    <td>✔</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Emiliano Martinez</td>
-                    <td>31/07/2026</td>
-                    <td></td>
-                    <td>✔</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Enzo Fernandez</td>
-                    <td>31/07/2026</td>
-                    <td></td>
-                    <td></td>
-                    <td>✔</td>
-                </tr>
-                <tr>
-                    <td>Julieta Correa</td>
-                    <td>31/07/2026</td>
-                    <td>✔</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Laura Dip</td>
-                    <td>31/07/2026</td>
-                    <td>✔</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-       </div>
+        <section class="titulo-asistencia">
+            <div class="volver">
+                <a href="detalleCursos.html"><i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+            <h2>Registro de Asistencia</h2>
+            <p>Control de asistencia de los alumnos</p>
+        </section>
+
+        <div class="container-asistencia">
+            <div class="card-asistencia">
+                <div class="card-header-asistencia">
+                    <i class="fa-solid fa-address-book"></i>
+                    <h3>Asistencia del día</h3>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre del Alumno</th>
+                                <th>Fecha</th>
+                                <th>Presente</th>
+                                <th>Ausente</th>
+                                <th>Justificado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Julian Alvarez</td>
+                                <td>31/07/2026</td>
+                                <td><span class="estado presente">✔</span></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Emiliano Martinez</td>
+                                <td>31/07/2026</td>
+                                <td></td>
+                                <td><span class="estado ausente">✔</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Enzo Fernandez</td>
+                                <td>31/07/2026</td>
+                                <td></td>
+                                <td></td>
+                                <td><span class="estado justificado">✔</span></td>
+                            </tr>
+                            <tr>
+                                <td>Julieta Correa</td>
+                                <td>31/07/2026</td>
+                                <td><span class="estado presente">✔</span></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Laura Dip</td>
+                                <td>31/07/2026</td>
+                                <td><span class="estado presente">✔</span></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </main>
+    
     <footer>
         <div class="conteinerfooter">
             <div class="footer-row">
@@ -105,7 +121,7 @@
                 <div class="footer-links">
                     <h4>Contacto de la Institución</h4>
                     <ul>
-                        <li><a href="https://mail.google.com" target="_blank">contacto@portafoliodigital.edu.ar</a></li>
+                        <li><a href="https://mail.google.com" target="_blank">contacto@tizadigital.edu.ar</a></li>
                         <li><a href="https://web.whatsapp.com/" target="_blank"> +54 383 456-7890</a></li>
                         <li><a href="https://www.google.com/maps" target="_blank">Av. Belgrano 1234, San Fernando del
                                 Valle de Catamarca</a></li>
@@ -119,17 +135,7 @@
                         <li><a href="#">Nosotros</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>redes Sociales</h4>
-                    <div class="sociales-link">
-                        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"
-                                style="color: white;"></i></i></a>
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"
-                                style="color: white;"></i></a>
-                        <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter"
-                                style=" color: white;"></i></a>
-                    </div>
-                </div>
+            
             </div>
         </div>
     </footer>   

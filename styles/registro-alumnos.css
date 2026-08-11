@@ -54,13 +54,23 @@ main {
 
 .lista-alumnos {
     overflow: hidden;
-    padding: 20px;
+    padding: 25px;
     color: var(--text);
-    background-color: var(--bg-card-tr);
-    border: 1px solid var(--bg-card);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.lista-alumnos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #2A4D3E, #6f9276);
 }
 
 .lista-alumnos .table {
@@ -74,7 +84,7 @@ main {
     padding: 15px 12px;
     color: white;
     white-space: nowrap;
-    background-color: var(--primary);
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
     border-color: var(--primary);
 }
 
@@ -85,30 +95,54 @@ main {
 
 .lista-alumnos .table-striped > tbody > tr:nth-of-type(odd) > * {
     color: var(--text);
-    background-color: var(--bg-main-tr);
+    background-color: #ecf5ed;
 }
 
 .lista-alumnos .table-hover > tbody > tr:hover > * {
     color: var(--text);
-    background-color: var(--primary-tr);
+    background-color: #d7e5d9;
 }
 
 .lista-alumnos .btn {
-    padding: 7px 12px;
-    color: var(--bg-card);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    color: #fff;
     font-weight: bold;
-    background-color: var(--primary);
-    border: 1px solid transparent;
-    border-radius: 8px;
-    transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+    transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
+}
+
+.lista-alumnos .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6f9276, #29362b);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.8s;
 }
 
 .lista-alumnos .btn:hover {
-    color: var(--bg-card);
-    background-color: var(--bg-main-tr);
-    border-color: var(--bg-card);
-    transform: translateX(-5px);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.55);
+    transform: translateY(-10px);
+    letter-spacing: 2px;
+    border-radius: 45px;
+}
+
+.lista-alumnos .btn:hover::before {
+    opacity: 1;
 }
 
 @media (max-width: 767px) {
@@ -121,6 +155,11 @@ main {
     }
 
     .lista-alumnos {
-        padding: 12px;
+        padding: 15px;
+    }
+
+    .lista-alumnos::before {
+        width: 100%;
+        height: 6px;
     }
 }
