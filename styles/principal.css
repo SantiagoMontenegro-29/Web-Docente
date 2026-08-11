@@ -177,6 +177,10 @@ main {
 .titulo-estadisticas,
 .titulo-alumno,
 .titulo-registro,
+.titulo-asistencia,
+.titulo-boletines,
+.titulo-contacto,
+.titulo-nosotros,
 #titulo-not{
     max-width: 1100px;
     margin: 0 auto 25px;
@@ -195,6 +199,10 @@ main {
 .titulo-estadisticas h2,
 .titulo-alumno h2,
 .titulo-registro h2,
+.titulo-asistencia,
+.titulo-boletines,
+.titulo-contacto,
+.titulo-nosotros,
 #titulo-not h2{
     margin-bottom: 10px;
     font-size: 50px;
@@ -207,6 +215,10 @@ main {
 .titulo-estadisticas p,
 .titulo-alumno p,
 .titulo-registro p,
+.titulo-asistencia
+.titulo-boletines,
+.titulo-contacto,
+.titulo-nosotros,
 #titulo-not p{
     margin: 0;
     font-size: 18px;
@@ -380,7 +392,8 @@ pantallas Pequeñas*/
     .titulo-portafolio h2,
     .titulo-estadisticas h2,
     .titulo-alumno h2,
-    .titulo-registro h2 {
+    .titulo-registro h2
+    .titulo-asistencia {
         font-size: 30px;
     }
 
@@ -389,7 +402,9 @@ pantallas Pequeñas*/
     .titulo-portafolio p,
     .titulo-estadisticas p,
     .titulo-alumno p,
-    .titulo-registro p {
+    .titulo-asistencia,
+    .titulo-registro p
+    .titulo-asistencia {
         font-size: 16px;
     }
 

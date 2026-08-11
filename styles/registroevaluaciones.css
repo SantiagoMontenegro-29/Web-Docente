@@ -9,115 +9,164 @@ body{
     background:#f2f2f2;
 }
 
-.container{
+main{
+    flex:1;    
+    animation: slideInUp 0.5s ease-out forwards;
+
+}
+
+main .titulo-evaluaciones{
     width:90%;
-    max: width 1200px;
-    margin:10px auto;
-}
+    max-width:1100px;
+    margin:0 auto 25px;
+    padding:40px 30px;
 
-h1{
+    color:white;
     text-align:center;
-    margin-bottom:25px;
-    color:#2A4D3E;
+    font-family:Arial, Helvetica, sans-serif;
+
+    border-radius:20px;
+
+    background:linear-gradient(135deg, #2A4D3E, #29362b);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.4);
 }
 
-table{
+main .titulo-evaluaciones h2{
+    margin:0 0 10px;
+
+    color:white;
+    font-size:50px;
+    font-weight:bold;
+}
+
+main .container{
+    width:90%;
+    max-width:1100px;
+    margin:30px auto;
+}
+
+main .container table{
     width:100%;
     border-collapse:collapse;
+
     background:#fff;
+
     box-shadow:0 4px 10px rgba(0,0,0,.15);
+
+    border-radius:12px;
+    overflow:hidden;
 }
 
-thead{
+main .container thead{
     background:#2A4D3E;
     color:#fff;
 }
 
-th,
-td{
+main .container th,
+main .container td{
     padding:15px;
     border:1px solid #ddd;
     text-align:center;
 }
 
-tbody tr:nth-child(even){
+main .container th{
+    font-size:18px;
+}
+
+main .container td{
+    font-size:16px;
+}
+
+
+main .container tbody tr:nth-child(even){
     background:#f8f8f8;
 }
 
-tbody tr:hover{
+main .container tbody tr:hover{
     background:#e8f2ed;
     transition:.3s;
 }
 
-th{
-    font-size:20px;
-}
-
-td{
-    font-size:20px;
-}
-
-td:last-child{
+main .container td:last-child{
     text-align:left;
 }
 
-main{
-    flex: 1;
-    padding: 40px 0;
-}
-/* ===========================
-   Pantallas medianas
-   =========================== */
-@media (max-width: 992px){
+/* =====================================
+   MEDIANOS
+   ===================================== */
 
-    .container{
+@media (max-width:992px){
+
+    main{
+        padding:30px 15px;
+    }
+
+    main .titulo-evaluaciones{
+        width:95%;
+        padding:30px 20px;
+    }
+
+    main .titulo-evaluaciones h2{
+        font-size:30px;
+    }
+
+    main .container{
         width:95%;
     }
 
-    h1{
-        font-size:28px;
-        text-align:center;
-        margin-bottom:20px;
-    }
-
-    table{
+    main .container table{
         display:block;
         width:100%;
         overflow-x:auto;
         white-space:nowrap;
     }
 
-    th,
-    td{
+    main .container th,
+    main .container td{
         padding:12px;
         font-size:15px;
     }
 
 }
 
-/* ===========================
-   Pantallas pequeñas
-   =========================== */
-@media (max-width: 576px){
 
-    .container{
-        width:98%;
+/* =====================================
+   CELULARES
+   ===================================== */
+
+@media (max-width:576px){
+
+    main{
+        padding:20px 10px;
     }
 
-    h1{
-        font-size:22px;
-        margin-bottom:18px;
+    main .titulo-evaluaciones{
+        width:100%;
+        padding:25px 15px;
+        margin-bottom:20px;
+        border-radius:15px;
     }
 
-    table{
+    main .titulo-evaluaciones h2{
+        font-size:23px;
+        line-height:1.3;
+    }
+
+    main .container{
+        width:100%;
+    }
+
+    main .container table{
         display:block;
         width:100%;
         overflow-x:auto;
         white-space:nowrap;
+        border-radius:10px;
     }
 
-    th,
-    td{
+    main .container th,
+    main .container td{
         padding:10px;
         font-size:14px;
     }

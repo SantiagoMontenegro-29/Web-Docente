@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -11,26 +11,30 @@ body{
 
 .container{
     width:90%;
-    max-width:1300px;
+    max-width:1100px;
     margin:10px auto;
 }
 
-h1{
-    text-align:center;
-    color:#2A4D3E;
-    margin-bottom:30px;
+.titulo-asistencia h2{
+    margin-bottom:10px;
+    font-size:50px;
+    font-weight:bold;
 }
 
 table{
     width:100%;
+    max-width:1100px;
+    margin:40px auto;
     border-collapse:collapse;
     background:#fff;
     box-shadow:0 4px 10px rgba(0,0,0,.15);
+    border-radius:20px;
+    overflow:hidden;
 }
 
 thead{
     background:#2A4D3E;
-    color:rgb(250, 245, 245);
+    color:rgb(250,245,245);
 }
 
 th,
@@ -57,62 +61,129 @@ td{
 }
 
 main{
-    flex: 1;
-    padding: 40px;
+    flex:1;    
+    animation: slideInUp 0.5s ease-out forwards;
+
 }
 
+
 /* ===========================
-   Pantallas medianas (tablets)
+   TABLETS
    =========================== */
-@media (max-width: 992px){
+
+@media (max-width:992px){
 
     .container{
         width:95%;
     }
 
-    h1{
-        font-size:28px;
-        margin-bottom:20px;
-    }
-
     table{
-        display:block;
-        overflow-x:auto;
-        white-space:nowrap;
+        margin:30px auto;
     }
 
     th,
     td{
-        padding:12px;
+        padding:12px 8px;
         font-size:15px;
     }
 
 }
-
-/* ===========================
-   Pantallas pequeñas (celulares)
-   =========================== */
-@media (max-width: 576px){
-
-    .container{
-        width:98%;
+.titulo-asistencia{
+        padding:30px 20px;
     }
 
-    h1{
-        font-size:22px;
-        margin-bottom:15px;
+    .titulo-asistencia h2{
+        font-size:36px;
+    }
+
+
+/* ===========================
+   CELULARES
+   =========================== */
+
+@media (max-width:576px){
+
+    .container{
+        width:95%;
     }
 
     table{
-        display:block;
-        overflow-x:auto;
-        white-space:nowrap;
+        width:100%;
+        margin:25px auto;
+        border:none;
+        box-shadow:0 4px 10px rgba(0,0,0,.15);
+        background:transparent;
     }
 
-    th,
+    .titulo-asistencia h2{
+        font-size:28px;
+    }
+
+    thead{
+        display:none;
+    }
+
+
+    tbody,
+    tr,
     td{
-        padding:10px;
+        display:block;
+        width:100%;
+    }
+
+    tbody tr{
+        background:#fff !important;
+        margin-bottom:15px;
+        border-radius:15px;
+        overflow:hidden;
+        box-shadow:0 4px 10px rgba(0,0,0,.12);
+        border-left:5px solid #2A4D3E;
+    }
+
+    td{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:12px 15px;
         font-size:14px;
+        text-align:right;
+        border:none;
+        border-bottom:1px solid #ddd;
+    }
+
+    td:last-child{
+        border-bottom:none;
+    }
+
+
+    td:nth-child(1)::before{
+        content:"Alumno";
+        font-weight:bold;
+        color:#2A4D3E;
+    }
+
+    td:nth-child(2)::before{
+        content:"Fecha";
+        font-weight:bold;
+        color:#2A4D3E;
+    }
+
+    td:nth-child(3)::before{
+        content:"Presente";
+        font-weight:bold;
+        color:#2A4D3E;
+    }
+
+    td:nth-child(4)::before{
+        content:"Ausente";
+        font-weight:bold;
+        color:#2A4D3E;
+    }
+
+    td:nth-child(5)::before{
+        content:"Justificado";
+        font-weight:bold;
+        color:#2A4D3E;
     }
 
 }
