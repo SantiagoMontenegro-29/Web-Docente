@@ -6,120 +6,210 @@
 }
 
 body{
-    background:#f2f2f2;
+    background-image: url(../assets/img/fondo.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.container{
-    width:90%;
-    max: width 1200px;
-    margin:10px auto;
+/* Título */
+.titulo-evaluaciones {
+    max-width: 1100px;
+    margin: 0 auto 25px;
+    padding: 40px 30px;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
 }
 
-h1{
-    text-align:center;
-    margin-bottom:25px;
-    color:#2A4D3E;
+.titulo-evaluaciones h2 {
+    margin-bottom: 10px;
+    font-size: 50px;
+    font-weight: bold;
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:#fff;
-    box-shadow:0 4px 10px rgba(0,0,0,.15);
+.titulo-evaluaciones p {
+    margin: 0;
+    font-size: 18px;
+    color: #e3eee4;
 }
 
-thead{
-    background:#2A4D3E;
-    color:#fff;
+.titulo-evaluaciones .volver {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-th,
-td{
-    padding:15px;
-    border:1px solid #ddd;
-    text-align:center;
+.titulo-evaluaciones .volver a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: 0.3s;
 }
 
-tbody tr:nth-child(even){
-    background:#f8f8f8;
+.titulo-evaluaciones .volver a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
 }
 
-tbody tr:hover{
-    background:#e8f2ed;
-    transition:.3s;
+/* Contenedor */
+.container-evaluaciones {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-th{
-    font-size:20px;
+/* Tarjeta */
+.card-evaluaciones {
+    background-color: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
 }
 
-td{
-    font-size:20px;
+.card-evaluaciones::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #2A4D3E, #6f9276);
 }
 
-td:last-child{
-    text-align:left;
+.card-header-evaluaciones {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    color: white;
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
+}
+
+.card-header-evaluaciones i {
+    font-size: 22px;
+}
+
+.card-header-evaluaciones h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-evaluaciones .table-responsive {
+    padding: 20px 24px 0;
+}
+
+.card-evaluaciones table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+}
+
+.card-evaluaciones thead {
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
+    color: #fff;
+}
+
+.card-evaluaciones th,
+.card-evaluaciones td {
+    padding: 15px;
+    border: 1px solid #d9ded9;
+    text-align: center;
+}
+
+.card-evaluaciones tbody tr:nth-child(even) {
+    background: #ecf5ed;
+}
+
+.card-evaluaciones tbody tr:hover {
+    background: #d7e5d9;
+    transition: .3s;
+}
+
+.card-evaluaciones th {
+    font-size: 16px;
+}
+
+.card-evaluaciones td {
+    font-size: 15px;
+    color: #4d5950;
+}
+
+.card-evaluaciones td:last-child {
+    text-align: left;
+}
+
+/* Nota */
+.nota {
+    display: inline-block;
+    min-width: 40px;
+    padding: 4px 12px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
 }
 
 main{
     flex: 1;
     padding: 40px 0;
 }
+
 /* ===========================
    Pantallas medianas
    =========================== */
 @media (max-width: 992px){
-
-    .container{
-        width:95%;
+    .titulo-evaluaciones h2 {
+        font-size: 35px;
     }
 
-    h1{
-        font-size:28px;
-        text-align:center;
-        margin-bottom:20px;
+    .card-evaluaciones table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
     }
-
-    table{
-        display:block;
-        width:100%;
-        overflow-x:auto;
-        white-space:nowrap;
-    }
-
-    th,
-    td{
-        padding:12px;
-        font-size:15px;
-    }
-
 }
 
 /* ===========================
    Pantallas pequeñas
    =========================== */
 @media (max-width: 576px){
-
-    .container{
-        width:98%;
+    .titulo-evaluaciones {
+        padding: 30px 20px;
     }
 
-    h1{
-        font-size:22px;
-        margin-bottom:18px;
+    .titulo-evaluaciones h2 {
+        font-size: 28px;
     }
 
-    table{
-        display:block;
-        width:100%;
-        overflow-x:auto;
-        white-space:nowrap;
+    .titulo-evaluaciones p {
+        font-size: 15px;
     }
 
-    th,
-    td{
-        padding:10px;
-        font-size:14px;
+    .titulo-evaluaciones .volver {
+        position: static;
+        transform: none;
+        margin-bottom: 15px;
     }
 
+    .card-evaluaciones .table-responsive {
+        padding: 15px;
+    }
 }

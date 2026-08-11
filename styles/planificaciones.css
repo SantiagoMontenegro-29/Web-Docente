@@ -37,49 +37,152 @@ body {
 
 /* tarjeta de planificaciones */
 .planificaciones {
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-.planificaciones .card {
-    margin-bottom: 40px;
+.card-planificacion {
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
 }
 
-.card-header p {
+.card-planificacion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #2A4D3E, #6f9276);
+}
+
+.card-header-planificacion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    color: white;
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
+}
+
+.card-header-planificacion i {
+    font-size: 22px;
+}
+
+.card-header-planificacion p {
     margin: 0;
-    text-align: center;
     font-weight: bold;
     font-size: 20px;
 }
 
-.card-body {
+.card-body-planificacion {
     display: grid;
     grid-template-columns: 70px 220px 220px 220px 1fr 180px;
     align-items: center;
     gap: 20px;
-    padding: 20px;
-    margin: 0px;
-}
-
-.card-body p {
+    padding: 20px 24px;
     margin: 0;
+    border-bottom: 1px solid #d9ded9;
 }
 
-.card-body h5 {
+.card-body-planificacion:last-child {
+    border-bottom: none;
+}
+
+.card-body-planificacion p {
+    margin: 0;
+    color: #4d5950;
+}
+
+.card-body-planificacion h5 {
     font-size: 20px;
     margin: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.card-body-planificacion .card-text strong {
+    color: var(--primary);
+}
+
+.icono-pdf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
+    box-shadow: 0 4px 12px rgba(42, 77, 62, 0.3);
 }
 
 .icono-pdf i {
-    margin: 10px;
-    font-size: 40px;
+    font-size: 30px;
+    color: white;
+}
+
+.card-body-planificacion .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+    padding: 10px 18px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+    transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
+}
+
+.card-body-planificacion .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6f9276, #29362b);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.8s;
+}
+
+.card-body-planificacion .btn i {
+    transition: 0.3s;
+}
+
+.card-body-planificacion .btn:hover {
+    transform: translateY(-10px);
+    letter-spacing: 2px;
+    border-radius: 45px;
+}
+
+.card-body-planificacion .btn:hover::before {
+    opacity: 1;
+}
+
+.card-body-planificacion .btn:hover i {
+    transform: translateX(4px);
 }
 
 /* Reponsive 
 pantallas medianas*/
-
 @media (max-width: 991px) {
-
-    .card-body{
+    .card-body-planificacion {
         grid-template-columns: 1fr;
         justify-items: center;
         text-align: center;
@@ -87,22 +190,26 @@ pantallas medianas*/
         padding: 20px;
     }
 
-    .card-body h5{
+    .card-body-planificacion h5 {
         font-size: 22px;
     }
 
-    .card-body p{
+    .card-body-planificacion p {
         font-size: 16px;
     }
 
-    .icono-pdf i{
-        font-size: 50px;
-        margin: 0;
+    .icono-pdf {
+        width: 70px;
+        height: 70px;
     }
 
-    .card-body .btn{
+    .icono-pdf i {
+        font-size: 35px;
+    }
+
+    .card-body-planificacion .btn {
         width: 100%;
         max-width: 250px;
+        justify-content: center;
     }
 }
-

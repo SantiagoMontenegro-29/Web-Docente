@@ -77,24 +77,42 @@ main {
 .btncarousel {
     width: 180px;
     height: 60px;
-    border-radius: 8px;
-    background-color: var(--primary);
+    border-radius: 15px;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
     color: var(--bg-card);
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid #0f172a00;
-    transition: 0.3s;
+    border: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+    transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
+}
+.btncarousel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6f9276, #29362b);
+    opacity: 0;
+    z-index: -1; 
+    transition: opacity 0.8s;
 }
 
 .btncarousel:hover {
-    background-color: var(--bg-main-tr);
-    color: var(--bg-card);
-    transition: 0.5s;
-    transform: translateX(-8px);
-    box-shadow: 15px 5px 40px rgb(0, 0, 0);
-    backdrop-filter:blur(4px) ;
-    border:1px solid var(--bg-card)
+    transform: translateY(-10px);
+    letter-spacing: 2px;
+    border-radius: 45px;
+}
+
+.btncarousel:hover::before {
+    opacity: 1;
 }
 
 .carousel-control-next-icon {
@@ -148,28 +166,45 @@ main {
     border:2px solid var(--bg-card)
 }
 .btnregistro {
-    width: 100%;
+    width: 350px;
     max-width: 500px;
     height: 80px;
-    border-radius: 22px;
-    background-color: var(--primary);
+    border-radius: 15px;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
     color: var(--bg-card);
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid #0f172a00;
-    transition: 0.3s;
+    border: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
     margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+    transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
+}
+.btnregistro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6f9276, #29362b);
+    opacity: 0;
+    z-index: -1; 
+    transition: opacity 0.8s;
 }
 
 .btnregistro:hover {
-    background-color: var(--bg-main-tr);
-    color: var(--bg-card);
-    transition: 0.5s;
-    transform: translateX(-8px);
-    box-shadow: 15px 5px 40px rgb(0, 0, 0);
-    backdrop-filter:blur(4px) ;
-    border:1px solid var(--bg-card)
+    transform: translateY(-10px);
+    letter-spacing: 2px;
+    border-radius: 45px;
+}
+
+.btnregistro:hover::before {
+    opacity: 1;
 }
 
 /* banner */
@@ -181,7 +216,7 @@ main {
 .banner1 img {
     width: 100%;
     height: auto;
-
+    margin: 0px 0 100px 0;
 }
 
 .banner1 nav {
@@ -192,26 +227,44 @@ main {
 }
 
 .btnnosotros {
-    width: 180px;
-    height: 60px;
-    border-radius: 8px;
-    background-color: var(--primary);
+    width: 350px;
+    max-width: 500px;
+    height: 80px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
     color: var(--bg-card);
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid #0f172a00;
-    transition: 0.3s;
+    border: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+    transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
+}
+.btnnosotros::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6f9276, #29362b);
+    opacity: 0;
+    z-index: -1; 
+    transition: opacity 0.8s;
 }
 
 .btnnosotros:hover {
-    background-color: var(--bg-main-tr);
-    color: var(--bg-card);
-    transition: 0.5s;
-    transform: translateX(-8px);
-    box-shadow: 15px 5px 40px rgb(0, 0, 0);
-    backdrop-filter:blur(4px) ;
-    border:1px solid var(--bg-card)
+    transform: translateY(-10px);
+    letter-spacing: 2px;
+    border-radius: 45px;
+}
+.btnnosotros:hover::before{
+     opacity: 1;
 }
 
 /* sección de noticias */
@@ -242,18 +295,19 @@ main {
     max-width: 100%;
     height: 300px;
     margin: 20px;
-    border-radius: 30px;
+    border-radius: 16px;
     overflow: hidden;
-    border: 2px solid #000000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     transition: 0.8s;
+    border: 2px hidden #27493b;
 }
 
 .card:hover {
     cursor: pointer;
-    transition: 0.3s;
-    transform: scale(1.1);
-    box-shadow: 20px 15px 40px rgb(0, 0, 0);
-    border:2px solid var(--bg-card)
+    transform: translateY(-10px);
+    box-shadow: 0 15px 32px rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--bg-card);
+    transition: 0.4s;
 }
 
 .card-img {
@@ -286,24 +340,42 @@ main {
 .btn-card {
     width: 150px;
     height: 50px;
-    border-radius: 8px;
-    background-color: var(--primary);
+    border-radius: 15px;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
     color: var(--bg-card);
     font-size: 20px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid #0f172a00;
-    transition: 0.3s;
+    border: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+    transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
+}
+
+.btn-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6f9276, #29362b);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.8s;
 }
 
 .btn-card:hover {
-   background-color: var(--bg-main-tr);
-    color: var(--bg-card);
-    transition: 0.5s;
-    transform: translateX(-8px);
-    box-shadow: 15px 5px 40px rgb(0, 0, 0);
-    backdrop-filter:blur(4px) ;
-    border:1px solid var(--bg-card)
+    transform: translateY(-10px);
+    letter-spacing: 2px;
+    border-radius: 45px;
+}
+
+.btn-card:hover::before {
+    opacity: 1;
 }
 
 /* sección de estadisticas */
@@ -338,20 +410,18 @@ main {
     margin: 20px;
     background: linear-gradient(135deg, #27493b, #29362b);
     border: 2px solid #0f172a00;
-    border-radius: 8px;
+    border-radius: 16px;
     text-align: center;
     color: var(--bg-card);
     font-family: Arial, Helvetica, sans-serif;
-    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: 0.35s;
 }
 
 .cards-estadisticas:hover {
-    background-color: var(--bg-main-tr);
-    color: var(--bg-card);
-    transition: 0.3s;
-    transform: translateX(-8px);
-    box-shadow: 25px 0px 40px rgba(0, 0, 0, 0.603);
-    border:2px solid var(--bg-card)
+    transform: translateY(-10px);
+    box-shadow: 0 15px 32px rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--bg-card);
 }
 
 .card-estadisticas p {
@@ -379,27 +449,46 @@ main {
 }
 
 .btn-estadisticas {
-    width: 220px;
-    height: 60px;
-    border-radius: 8px;
-    background-color: var(--primary);
+    width: 350px;
+    max-width: 500px;
+    height: 80px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
     color: var(--bg-card);
-    font-size: 18px;
+    font-size: 26px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid #0f172a00;
-    transition: 0.3s;
-    cursor: pointer;
+    border: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+    transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
+}
+
+.btn-estadisticas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6f9276, #29362b);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.8s;
 }
 
 .btn-estadisticas:hover {
-    background-color: var(--bg-main-tr);
-    color: var(--bg-card);
-    transition: 0.5s;
-    transform: translateX(-8px);
-    box-shadow: 15px 5px 40px rgb(0, 0, 0);
-    backdrop-filter: blur(4px);
-    border: 1px solid var(--bg-card);
+    transform: translateY(-10px);
+    letter-spacing: 2px;
+    border-radius: 45px;
+}
+
+.btn-estadisticas:hover::before {
+    opacity: 1;
 }
 
 /* footer */
@@ -411,9 +500,6 @@ main {
 }
 
 footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     background-color: var(--bg-main3-tr);
     padding: 80px 0;
     font-family: sans-serif;
@@ -421,7 +507,9 @@ footer {
 }
 
 .footer-row {
-    display: flex;
+        display: flex;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -461,24 +549,6 @@ footer {
     transition: 0.6;
 }
 
-.sociales-link a {
-    display: inline-block;
-    min-height: 40px;
-    width: 40px;
-    background-color: var(--primary-tr);
-    margin: 0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: var(--bg-card);
-    transition: 1s;
-}
-
-.sociales-link a:hover {
-    background-color: var(--bg-main-tr);
-    transition: 1s;
-    transform: scale(1.4);
-}
 
 #texfooter {
     color: #BBBBBB;
@@ -548,8 +618,15 @@ footer {
         flex-direction: column;
     }
 
-    .banner1 {
-        display: none;
+    .banner1 nav {
+        bottom: 10px;
+    }
+
+    .btnnosotros {
+        width: min(320px, 90vw);
+        height: 70px;
+        font-size: 20px;
+        margin: 10px;
     }
 
     .footer-links {
@@ -558,7 +635,12 @@ footer {
     }
 
     .d-item {
-        height: 300px;
+        height: auto;
+    }
+
+    .d-item img {
+        height: auto;
+        object-fit: fill;
     }
 
     .btncarousel {
@@ -639,7 +721,23 @@ footer {
     }
 
     .d-item {
-        height: 220px;
+        height: auto;
+    }
+
+    .d-item img {
+        height: auto;
+        object-fit: fill;
+        object-position: center;
+    }
+
+    .banner1 {
+        height: auto;
+    }
+
+    .banner1 img {
+        height: auto;
+        object-fit: fill;
+        object-position: center;
     }
 
     .btncarousel {
@@ -661,6 +759,13 @@ footer {
         height: 60px;
         font-size: 18px;
         max-width: 280px;
+    }
+
+    .btnnosotros {
+        width: min(260px, 90vw);
+        height: 60px;
+        font-size: 18px;
+        margin: 8px;
     }
 
     #titulo-not {

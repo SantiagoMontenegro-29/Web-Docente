@@ -6,113 +6,221 @@
 }
 
 body{
-    background:#f2f2f2;
+    background-image: url(../assets/img/fondo.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.container{
-    width:90%;
-    max-width:1300px;
-    margin:10px auto;
+/* Título */
+.titulo-asistencia {
+    max-width: 1100px;
+    margin: 0 auto 25px;
+    padding: 40px 30px;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
 }
 
-h1{
-    text-align:center;
-    color:#2A4D3E;
-    margin-bottom:30px;
+.titulo-asistencia h2 {
+    margin-bottom: 10px;
+    font-size: 50px;
+    font-weight: bold;
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:#fff;
-    box-shadow:0 4px 10px rgba(0,0,0,.15);
+.titulo-asistencia p {
+    margin: 0;
+    font-size: 18px;
+    color: #e3eee4;
 }
 
-thead{
-    background:#2A4D3E;
-    color:rgb(250, 245, 245);
+.titulo-asistencia .volver {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-th,
-td{
-    padding:15px;
-    text-align:center;
-    border:1px solid #ddd;
+.titulo-asistencia .volver a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: 0.3s;
 }
 
-tbody tr:nth-child(even){
-    background:#f8f9fa;
+.titulo-asistencia .volver a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
 }
 
-tbody tr:hover{
-    background:#e9f3ff;
+/* Contenedor */
+.container-asistencia {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-th{
-    font-size:17px;
+/* Tarjeta */
+.card-asistencia {
+    background-color: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
 }
 
-td{
-    font-size:16px;
+.card-asistencia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #2A4D3E, #6f9276);
+}
+
+.card-header-asistencia {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    color: white;
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
+}
+
+.card-header-asistencia i {
+    font-size: 22px;
+}
+
+.card-header-asistencia h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-asistencia .table-responsive {
+    padding: 20px 24px 0;
+}
+
+.card-asistencia table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+}
+
+.card-asistencia thead {
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
+    color: rgb(250, 245, 245);
+}
+
+.card-asistencia th,
+.card-asistencia td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #d9ded9;
+}
+
+.card-asistencia tbody tr:nth-child(even) {
+    background: #ecf5ed;
+}
+
+.card-asistencia tbody tr:hover {
+    background: #d7e5d9;
+    transition: .3s;
+}
+
+.card-asistencia th {
+    font-size: 16px;
+}
+
+.card-asistencia td {
+    font-size: 15px;
+    color: #4d5950;
+}
+
+/* Estados de asistencia */
+.estado {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.estado.presente {
+    color: white;
+    background-color: #28a745;
+}
+
+.estado.ausente {
+    color: white;
+    background-color: #dc3545;
+}
+
+.estado.justificado {
+    color: #155724;
+    background-color: #ffc107;
 }
 
 main{
     flex: 1;
-    padding: 40px;
+    padding: 40px 0;
 }
 
 /* ===========================
    Pantallas medianas (tablets)
    =========================== */
 @media (max-width: 992px){
-
-    .container{
-        width:95%;
+    .titulo-asistencia h2 {
+        font-size: 35px;
     }
 
-    h1{
-        font-size:28px;
-        margin-bottom:20px;
+    .card-asistencia table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
-
-    table{
-        display:block;
-        overflow-x:auto;
-        white-space:nowrap;
-    }
-
-    th,
-    td{
-        padding:12px;
-        font-size:15px;
-    }
-
 }
 
 /* ===========================
    Pantallas pequeñas (celulares)
    =========================== */
 @media (max-width: 576px){
-
-    .container{
-        width:98%;
+    .titulo-asistencia {
+        padding: 30px 20px;
     }
 
-    h1{
-        font-size:22px;
-        margin-bottom:15px;
+    .titulo-asistencia h2 {
+        font-size: 28px;
     }
 
-    table{
-        display:block;
-        overflow-x:auto;
-        white-space:nowrap;
+    .titulo-asistencia p {
+        font-size: 15px;
     }
 
-    th,
-    td{
-        padding:10px;
-        font-size:14px;
+    .titulo-asistencia .volver {
+        position: static;
+        transform: none;
+        margin-bottom: 15px;
     }
 
+    .card-asistencia .table-responsive {
+        padding: 15px;
+    }
 }

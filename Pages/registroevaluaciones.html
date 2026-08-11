@@ -29,10 +29,8 @@
                         <li><a href="../index.html">Inicio</a></li>
                         <li><a href="../Pages/cursos.html">Mis Cursos</a></li>
                         <li><a href="./portafolio.html">Mi Portafolio</a></li>
-                        <li><a href="">Contacto</a></li>
-                        <li><a href="">Acerca de Nosotros</a></li>
                         <li><a href="./login.html">Login y Registro</a></li>
-                        
+                        <li><a href="./gestion.html">Gestión</a></li>
                     </ul>
                 </nav>
             </div>
@@ -41,65 +39,79 @@
     </header>
 
     <main>
-        <div class="container">
-        <h1>Registro de Evaluaciones</h1>
+        <section class="titulo-evaluaciones">
+            <div class="volver">
+                <a href="detalleCursos.html"><i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+            <h2>Registro de Evaluaciones</h2>
+            <p>Consulta las evaluaciones registradas</p>
+        </section>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Alumno</th>
-                    <th>Evaluación</th>
-                    <th>Fecha</th>
-                    <th>Calificación</th>
-                    <th>Observaciones</th>
-                </tr>
-            </thead>
+        <div class="container-evaluaciones">
+            <div class="card-evaluaciones">
+                <div class="card-header-evaluaciones">
+                    <i class="fa-solid fa-file-circle-check"></i>
+                    <h3>Evaluaciones del curso</h3>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Alumno</th>
+                                <th>Evaluación</th>
+                                <th>Fecha</th>
+                                <th>Calificación</th>
+                                <th>Observaciones</th>
+                            </tr>
+                        </thead>
 
-            <tbody>
-                <tr>
-                    <td>Julian Alvarez</td>
-                    <td>Matemática</td>
-                    <td>10/07/2026</td>
-                    <td>9</td>
-                    <td>Excelente desempeño.</td>
-                </tr>
+                        <tbody>
+                            <tr>
+                                <td>Julian Alvarez</td>
+                                <td>Matemática</td>
+                                <td>10/07/2026</td>
+                                <td><span class="nota">9</span></td>
+                                <td>Excelente desempeño.</td>
+                            </tr>
 
-                <tr>
-                    <td>Emiliano Martinez</td>
-                    <td>Lengua</td>
-                    <td>10/07/2026</td>
-                    <td>8</td>
-                    <td>Muy buen trabajo.</td>
-                </tr>
+                            <tr>
+                                <td>Emiliano Martinez</td>
+                                <td>Lengua</td>
+                                <td>10/07/2026</td>
+                                <td><span class="nota">8</span></td>
+                                <td>Muy buen trabajo.</td>
+                            </tr>
 
-                <tr>
-                    <td>Enzo Fernandez</td>
-                    <td>Historia</td>
-                    <td>10 /07/2026</td>
-                    <td>7</td>
-                    <td>Debe mejorar participacion</td>
-                </tr>
-                <tr>
-                    <td>Julieta Ortega</td>
-                    <td>Geografía</td>
-                    <td>15/07/2026</td>
-                    <td>10</td>
-                    <td>Trabajo sobresaliente.</td>
-                </tr>
-                <tr>
-                    <td>Luciana Dip</td>
-                    <td>Ciencias</td>
-                    <td>15/07/2026</td>
-                    <td>5</td>
-                    <td>Necesita reforzar contenidos.</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+                            <tr>
+                                <td>Enzo Fernandez</td>
+                                <td>Historia</td>
+                                <td>10 /07/2026</td>
+                                <td><span class="nota">7</span></td>
+                                <td>Debe mejorar participacion</td>
+                            </tr>
+                            <tr>
+                                <td>Julieta Ortega</td>
+                                <td>Geografía</td>
+                                <td>15/07/2026</td>
+                                <td><span class="nota">10</span></td>
+                                <td>Trabajo sobresaliente.</td>
+                            </tr>
+                            <tr>
+                                <td>Luciana Dip</td>
+                                <td>Ciencias</td>
+                                <td>15/07/2026</td>
+                                <td><span class="nota">5</span></td>
+                                <td>Necesita reforzar contenidos.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </main>
 
   
-    <footer>
+ <footer>
         <div class="conteinerfooter">
             <div class="footer-row">
                 <div class="footer-links">
@@ -113,7 +125,7 @@
                 <div class="footer-links">
                     <h4>Contacto de la Institución</h4>
                     <ul>
-                        <li><a href="https://mail.google.com" target="_blank">contacto@portafoliodigital.edu.ar</a></li>
+                        <li><a href="https://mail.google.com" target="_blank">contacto@tizadigital.edu.ar</a></li>
                         <li><a href="https://web.whatsapp.com/" target="_blank"> +54 383 456-7890</a></li>
                         <li><a href="https://www.google.com/maps" target="_blank">Av. Belgrano 1234, San Fernando del
                                 Valle de Catamarca</a></li>
@@ -127,22 +139,12 @@
                         <li><a href="#">Nosotros</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>redes Sociales</h4>
-                    <div class="sociales-link">
-                        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"
-                                style="color: white;"></i></i></a>
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"
-                                style="color: white;"></i></a>
-                        <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter"
-                                style=" color: white;"></i></a>
-                    </div>
-                </div>
+            
             </div>
 
         </div>
 
-    </footer>    
+    </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

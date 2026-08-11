@@ -111,24 +111,70 @@ main{
 
     padding:14px;
 
-    background:#2A4D3E;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
 
-    color:white;
+    color:#fff;
 
     border:none;
 
-    border-radius:8px;
+    border-radius:15px;
 
     cursor:pointer;
 
     font-size:17px;
 
-    transition:.3s;
+    font-weight: bold;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
+
+    position: relative;
+
+    overflow: hidden;
+
+    z-index: 1;
+
+    white-space: nowrap;
+
+    transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
+}
+
+.formulario button::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: linear-gradient(135deg, #6f9276, #29362b);
+
+    opacity: 0;
+
+    z-index: -1;
+
+    transition: opacity 0.8s;
 }
 
 .formulario button:hover{
 
-    background:#1d372d;
+    transform: translateY(-10px);
+
+    letter-spacing: 2px;
+
+    border-radius: 45px;
+}
+
+.formulario button:hover::before{
+
+    opacity: 1;
 }
 /* ===========================
    Tablets
