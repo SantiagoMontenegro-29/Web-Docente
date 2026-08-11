@@ -280,8 +280,9 @@ main{
     padding: 40px 0;
 }
 
+
 /* ===========================
-   Pantallas medianas
+   TABLETS
    =========================== */
 @media (max-width: 992px){
     .titulo-boletin h2 {
@@ -293,8 +294,9 @@ main{
     }
 }
 
+
 /* ===========================
-   Pantallas pequeñas
+   CELULARES
    =========================== */
 @media (max-width: 576px){
     .titulo-boletin {

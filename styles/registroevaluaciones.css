@@ -166,6 +166,12 @@ body{
     background: linear-gradient(135deg, #2A4D3E, #6f9276);
 }
 
+/* =====================================
+   MEDIANOS
+   ===================================== */
+
+@media (max-width:992px){
+
 main{
     flex: 1;
     padding: 40px 0;
