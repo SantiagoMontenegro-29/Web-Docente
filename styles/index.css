@@ -41,12 +41,14 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 /* ================= ANIMACIÓN DE TRANSICIÓN ENTRE PÁGINAS ================= */
 @keyframes slideInUp {
     from {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -92,6 +94,7 @@ main {
     white-space: nowrap;
     transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
 }
+
 .btncarousel::before {
     content: "";
     position: absolute;
@@ -101,7 +104,7 @@ main {
     height: 100%;
     background: linear-gradient(135deg, #6f9276, #29362b);
     opacity: 0;
-    z-index: -1; 
+    z-index: -1;
     transition: opacity 0.8s;
 }
 
@@ -152,19 +155,22 @@ main {
     width: 100%;
     max-width: 40rem;
 }
-.imagen-reg{
+
+.imagen-reg {
     border-radius: 35px;
-     transition: 0.8s;
-     border:2px solid #0f172a00;
-     max-width: 100%;
-     height: auto;
+    transition: 0.8s;
+    border: 2px solid #0f172a00;
+    max-width: 100%;
+    height: auto;
 }
-.imagen-reg:hover{
+
+.imagen-reg:hover {
     transition: 0.3s;
     transform: scale(1.05);
     box-shadow: 25px 15px 40px rgba(0, 0, 0, 0.589);
-    border:2px solid var(--bg-card)
+    border: 2px solid var(--bg-card)
 }
+
 .btnregistro {
     width: 350px;
     max-width: 500px;
@@ -184,6 +190,7 @@ main {
     white-space: nowrap;
     transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
 }
+
 .btnregistro::before {
     content: "";
     position: absolute;
@@ -193,7 +200,7 @@ main {
     height: 100%;
     background: linear-gradient(135deg, #6f9276, #29362b);
     opacity: 0;
-    z-index: -1; 
+    z-index: -1;
     transition: opacity 0.8s;
 }
 
@@ -245,7 +252,8 @@ main {
     white-space: nowrap;
     transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
 }
-.btnnosotros::before{
+
+.btnnosotros::before {
     content: "";
     position: absolute;
     top: 0;
@@ -254,7 +262,7 @@ main {
     height: 100%;
     background: linear-gradient(135deg, #6f9276, #29362b);
     opacity: 0;
-    z-index: -1; 
+    z-index: -1;
     transition: opacity 0.8s;
 }
 
@@ -263,8 +271,9 @@ main {
     letter-spacing: 2px;
     border-radius: 45px;
 }
-.btnnosotros:hover::before{
-     opacity: 1;
+
+.btnnosotros:hover::before {
+    opacity: 1;
 }
 
 /* sección de noticias */
@@ -400,7 +409,8 @@ main {
     letter-spacing: 15px;
     text-shadow: 15px 5px 15px black;
 }
-.titulo-estadisticas h2{
+
+.titulo-estadisticas h2 {
     font-size: 60px;
 }
 
@@ -495,11 +505,12 @@ main {
 .conteinerfooter {
     max-width: 1200px;
     margin: 0;
-    width: 100%;
-    padding: 0 20px;
 }
 
 footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: var(--bg-main3-tr);
     padding: 80px 0;
     font-family: sans-serif;
@@ -507,7 +518,7 @@ footer {
 }
 
 .footer-row {
-        display: flex;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
@@ -535,7 +546,7 @@ footer {
 
 .footer-links ul li a {
     font-size: 18px;
-    color: var(--bg-main);
+    color: var(--bg-main3-tr);
     display: block;
     margin-bottom: 15px;
     transition: 0.3s;
@@ -549,11 +560,19 @@ footer {
     transition: 0.6;
 }
 
-
 #texfooter {
-    color: #BBBBBB;
+    color: var(--bg-main3-tr);
     text-align: left;
     font-size: 15px;
+}
+
+.footer-links p {
+    color: var(--bg-main3-tr);
+}
+
+.footer-links i {
+    color: var(--primary);
+    margin-right: 8px;
 }
 
 /* ================= RESPONSIVE ================= */
