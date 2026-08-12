@@ -1,52 +1,4 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-}
 
-:root {
-    --bg-main: #f0f2f5;
-    --bg-main-tr: #aeaba67d;
-    --bg-main2: #676766;
-    --bg-main2-tr: #6767667f;
-    --bg-main3: #3d3d3d;
-    --bg-main3-tr: #3d3d3d7e;
-    --bg-card: #FFFFFF;
-    --bg-card-tr: #ffffff7e;
-    --primary: #2A4D3E;
-    --primary-hover: #1e372c;
-    --primary-tr: #2a4d3e7d;
-    --text: #1C2826;
-    --border-color: #dcdcdc;
-}
-
-body.dark-mode {
-    --bg-main: #0F172A;
-    --bg-card: #1E293B;
-    --bg-card-tr: #1e293bcc;
-    --primary: #38BDF8;
-    --primary-hover: #0284c7;
-    --text: #F8FAFC;
-    --border-color: #334155;
-}
-
-body {
-    background-image: url(../assets/img/fondo.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1;
-}
 
 .text-center {
     text-align: center;
@@ -84,18 +36,21 @@ main {
 .card {
     height: 100%;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     color: var(--text);
     background-color: var(--bg-card-tr);
     transition: 0.4s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.781);
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    border-radius: 45px;
+    transform: translateY(-8px);
+}
+.card:hover .icono-estadistica i {
+    transform: rotate(15deg) scale(1.1);
 }
 
-/* Tarjetas superiores con fondo verde primary */
 .estadistica-col .card {
     background-color: var(--primary);
     color: white;
@@ -111,10 +66,12 @@ main {
 
 .estadistica-col .icono-estadistica {
     background-color: white;
+    transition: 0.4s;
 }
 
 .estadistica-col .icono-estadistica i {
     color: var(--primary);
+    transition: 0.4s;
 }
 
 .card-body {

@@ -213,3 +213,49 @@ pantallas medianas*/
         justify-content: center;
     }
 }
+
+/* Pulido de planificaciones */
+.planificaciones { padding-bottom: 50px; }
+.card-planificacion { border-radius: 22px; box-shadow: 0 16px 36px rgba(23, 42, 33, .2); }
+.card-body-planificacion { transition: background .2s ease, transform .2s ease; }
+.card-body-planificacion:hover { background: #f1f7f2; transform: translateX(4px); }
+.card-body-planificacion .descripcion { color: #68736a; font-style: italic; }
+.card-body-planificacion .btn { min-height: 42px; justify-content: center; }
+@media (max-width: 991px) {
+    .card-body-planificacion:hover { transform: translateY(-3px); }
+}
+
+@media (max-width: 1140px) and (min-width: 992px) {
+    .planificaciones { padding-inline: 14px; }
+    .card-body-planificacion {
+        grid-template-columns: 64px minmax(140px, 1fr) minmax(120px, 1fr) minmax(120px, 1fr) minmax(150px, 1.35fr) auto;
+        gap: 14px;
+        padding: 18px;
+    }
+}
+
+@media (max-width: 560px) {
+    .titulo-detalle { padding: 28px 16px; }
+    .titulo-detalle nav a { font-size: 28px; padding-left: 36px; }
+    .titulo-detalle nav a i { left: 0; font-size: 21px; }
+    .planificaciones { padding-inline: 10px; }
+    .card-planificacion { border-radius: 16px; }
+    .card-header-planificacion { justify-content: center; padding: 16px; text-align: center; }
+    .card-header-planificacion p { font-size: 18px; }
+    .card-body-planificacion { padding: 18px 14px; }
+    .card-body-planificacion .btn { width: 100%; max-width: 280px; }
+}
+
+/* ESTILOS VISUALES DE PLANIFICACIONES */
+.titulo-detalle { width: min(1100px, calc(100% - 40px)); margin: 0 auto 28px; padding: 34px 78px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 24px; background: radial-gradient(circle at 88% 18%, rgba(145, 190, 150, .45), transparent 28%), linear-gradient(135deg, #193d2e, #2a4d3e 56%, #4e7557); box-shadow: 0 18px 40px rgba(18, 47, 34, .3); }
+.titulo-detalle nav a i, .card-header-planificacion i, .icono-pdf i { transition: transform .3s ease; }
+.titulo-detalle nav a:hover i { transform: translateX(-5px) rotate(-8deg); }
+.card-header-planificacion:hover i, .card-body-planificacion:hover .icono-pdf i { transform: rotate(-8deg) scale(1.1); }
+.planificaciones { width: min(1100px, calc(100% - 40px)); max-width: none; margin-inline: auto; padding-inline: 0; display: grid; gap: 22px; }
+.card-planificacion { margin: 0; border-radius: 22px; box-shadow: 0 16px 34px rgba(22, 48, 34, .16); }
+.card-header-planificacion { min-height: 72px; padding: 18px 24px; background: linear-gradient(135deg, #1d4533, #4f7959); }
+.card-body-planificacion { grid-template-columns: 64px minmax(130px, 1.1fr) minmax(115px, .9fr) minmax(115px, .9fr) minmax(160px, 1.4fr) auto; gap: 16px; padding: 18px 24px; }
+.icono-pdf { width: 54px; height: 54px; }
+.icono-pdf i { font-size: 26px; }
+@media (max-width: 1050px) { .card-body-planificacion { grid-template-columns: 64px 1fr 1fr; } .card-body-planificacion .descripcion { grid-column: 2 / -1; } .card-body-planificacion .btn { grid-column: 2 / -1; justify-self: start; } }
+@media (max-width: 700px) { .titulo-detalle, .planificaciones { width: calc(100% - 24px); } .titulo-detalle { padding: 28px 18px; border-radius: 18px; } .card-body-planificacion { grid-template-columns: 1fr; justify-items: center; text-align: center; padding: 20px 16px; } .card-body-planificacion .descripcion, .card-body-planificacion .btn { grid-column: auto; justify-self: center; } .card-body-planificacion .btn { width: min(100%, 300px); } .card-header-planificacion { justify-content: center; text-align: center; } }
