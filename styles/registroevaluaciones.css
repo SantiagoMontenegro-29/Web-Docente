@@ -176,6 +176,7 @@ main{
     flex: 1;
     padding: 40px 0;
 }
+}
 
 /* ===========================
    Pantallas medianas
@@ -219,3 +220,38 @@ main{
         padding: 15px;
     }
 }
+
+/* Pulido del registro de evaluaciones */
+.container-evaluaciones { padding-bottom: 50px; }
+.card-evaluaciones { border-radius: 22px; box-shadow: 0 16px 36px rgba(23, 42, 33, .2); }
+.card-header-evaluaciones { padding: 18px 24px; }
+.card-evaluaciones tbody tr { transition: background .2s ease, transform .2s ease; }
+.card-evaluaciones tbody tr:hover { transform: scale(1.003); }
+.nota { min-width: 46px; padding: 6px 14px; box-shadow: 0 3px 8px rgba(23, 42, 33, .16); }
+.card-evaluaciones td:last-child { max-width: 330px; line-height: 1.45; }
+
+@media (max-width: 767px) {
+    .container-evaluaciones { padding-inline: 10px; }
+    .card-evaluaciones .table-responsive { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .card-evaluaciones table { display: table; min-width: 740px; }
+}
+
+@media (max-width: 560px) {
+    .titulo-evaluaciones { padding: 28px 16px; }
+    .card-header-evaluaciones { padding: 16px; }
+    .card-evaluaciones .table-responsive { padding: 14px 10px 0; }
+    .card-evaluaciones th, .card-evaluaciones td { padding: 12px 10px; }
+}
+
+/* ESTILOS VISUALES DE EVALUACIONES */
+.titulo-evaluaciones { width: min(1100px, calc(100% - 40px)); margin: 0 auto 28px; padding: 34px 78px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 24px; background: radial-gradient(circle at 88% 18%, rgba(145, 190, 150, .45), transparent 28%), linear-gradient(135deg, #193d2e, #2a4d3e 56%, #4e7557); box-shadow: 0 18px 40px rgba(18, 47, 34, .3); }
+.titulo-evaluaciones .volver i, .card-header-evaluaciones i { transition: transform .3s ease; }
+.titulo-evaluaciones .volver a:hover i { transform: translateX(-5px) rotate(-8deg); }
+.card-header-evaluaciones:hover i { transform: rotate(-8deg) scale(1.1); }
+.container-evaluaciones { width: min(1100px, calc(100% - 40px)); max-width: none; margin-inline: auto; padding-inline: 0; }
+.card-evaluaciones { border-radius: 22px; box-shadow: 0 16px 34px rgba(22, 48, 34, .16); }
+.card-header-evaluaciones { min-height: 72px; padding: 18px 24px; background: linear-gradient(135deg, #1d4533, #4f7959); }
+.card-evaluaciones th { font-size: 13px; letter-spacing: .3px; text-transform: uppercase; }
+.nota { transition: transform .3s ease; }
+.card-evaluaciones tbody tr:hover .nota { transform: rotate(-8deg) scale(1.1); }
+@media (max-width: 700px) { .titulo-evaluaciones, .container-evaluaciones { width: calc(100% - 24px); } .titulo-evaluaciones { padding: 28px 18px; border-radius: 18px; } .titulo-evaluaciones h2 { font-size: 30px; } }

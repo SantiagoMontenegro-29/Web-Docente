@@ -1,47 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-}
-
-:root {
-    --bg-main: #f0f2f5;
-    --bg-main-tr: #aeaba67d;
-    --bg-main2: #676766;
-    --bg-main2-tr: #6767667f;
-    --bg-main3: #3d3d3d;
-    --bg-main3-tr: #3d3d3d7e;
-    --bg-card: #FFFFFF;
-    --primary: #2A4D3E;
-    --primary-hover: #1e372c;
-    --primary-tr: #2a4d3e7d;
-    --text: #1C2826;
-    --border-color: #dcdcdc;
-}
-
-body.dark-mode {
-    --bg-main: #0F172A;
-    --bg-card: #1E293B;
-    --primary: #38BDF8;
-    --primary-hover: #0284c7;
-    --text: #F8FAFC;
-    --border-color: #334155;
-}
-
-body {
-    background-image: url(../assets/img/fondo.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 /* ================= ESTADISTICAS ================= */
 .estadisticas-detalle {
     display: grid;
@@ -57,16 +13,14 @@ body {
     align-items: center;
     gap: 15px;
     padding: 22px 20px;
-    background-color: rgba(255, 255, 255, 0.94);
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    border-radius: 15px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.61);
     transition: 0.3s;
 }
 
 .stat-item:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
 }
 
 .stat-item i {
@@ -81,18 +35,22 @@ body {
     border-radius: 12px;
     background: linear-gradient(135deg, #2A4D3E, #6f9276);
     box-shadow: 0 4px 10px rgba(42, 77, 62, 0.3);
+    transition: transform .3s;
+}
+.estadisticas-detalle .stat-item:hover i{
+    transform: rotate(-8deg) scale(1.1);
 }
 
 .stat-item h4 {
     margin: 0;
-    color: var(--primary);
+    color: var(--bg-main);
     font-size: 26px;
     font-weight: bold;
 }
 
 .stat-item p {
     margin: 0;
-    color: #59635b;
+    color: var(--bg-main);
     font-size: 14px;
 }
 
@@ -111,23 +69,12 @@ body {
     gap: 28px;
     padding: 30px;
     margin: 0;
-    color: var(--text);
-    background-color: rgba(255, 255, 255, 0.94);
-    border: 1px solid rgba(255, 255, 255, 0.45);
+    color: var(--bg-main);
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
     border-radius: 16px;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
-}
-
-.info-materia::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 6px;
-    height: 100%;
-    background: linear-gradient(180deg, #2A4D3E, #6f9276);
 }
 
 .info-materia img {
@@ -136,30 +83,27 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid #d7e5d9;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    flex-shrink: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.678);
 }
 
 .text-materia {
+    text-align: center;
     flex: 1;
     min-width: 250px;
 }
 
 .text-materia h3 {
     margin-bottom: 12px;
-    color: var(--primary);
-    font-size: 30px;
+    color: var(--bg-main);
+    font-size: 50px;
     font-weight: bold;
-}
-
-.text-materia p {
-    margin: 14px 0 0;
-    color: #59635b;
-    line-height: 1.6;
+    text-align: center;
 }
 
 .datos {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
 }
@@ -167,6 +111,8 @@ body {
 .dato {
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 8px;
     padding: 8px 14px;
     color: var(--primary);
@@ -177,13 +123,15 @@ body {
 }
 
 .dato:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(42, 77, 62, 0.2);
+    transform: translateY(-6px);
 }
-
+.dato:hover.dato i {
+   transform: rotate(-15deg) scale(1.1);
+}
 .dato i {
     color: var(--primary);
-    font-size: 19px;
+    font-size: 20px;
+    transition: 0.3s;
 }
 
 .dato p {
@@ -193,24 +141,6 @@ body {
 }
 
 /* ================= MODULOS ================= */
-.titulo-modulos {
-    max-width: 1100px;
-    margin: 45px auto 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-
-.titulo-modulos h3 {
-    margin: 0 0 8px;
-    color: #263f32;
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.titulo-modulos p {
-    margin: 0;
-    color: #445047;
-}
 
 .card-detalles {
     display: flex;
@@ -219,6 +149,9 @@ body {
     gap: 25px;
     flex-wrap: wrap;
     padding: 25px 0 10px;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    border-radius: 20px;
+    margin: 40px 0 40px 0;
 }
 
 .card-detalles .card {
@@ -227,14 +160,17 @@ body {
     border: none;
     border-radius: 16px;
     color: var(--text);
-    background-color: rgba(255, 255, 255, 0.94);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.685);
     transition: 0.35s;
+    margin-bottom: 40px;
 }
 
 .card-detalles .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 32px rgba(0, 0, 0, 0.4);
+}
+.card-detalles .card:hover .icono-detalle {
+    transform: rotate(-15deg) scale(1.1);
 }
 
 .card-detalles .card-body {
@@ -249,7 +185,7 @@ body {
 
 .card-detalles .card-body h5 {
     margin-top: 8px;
-    color: var(--primary);
+    color: var(--bg-main);
     font-size: 20px;
     font-weight: bold;
 }
@@ -257,7 +193,7 @@ body {
 .card-detalles .card-text {
     flex: 1;
     margin: 0;
-    color: #59635b;
+    color: var(--bg-main);
     line-height: 1.6;
 }
 
@@ -271,6 +207,7 @@ body {
     border-radius: 50%;
     background: linear-gradient(135deg, #2A4D3E, #638a6c);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
 }
 
 .icono-detalle i {
@@ -339,6 +276,7 @@ body {
 }
 
 @media (max-width: 767px) {
+
     .materia,
     .detalles-cursos {
         padding: 0 16px;
@@ -360,11 +298,6 @@ body {
         text-align: center;
     }
 
-    .info-materia::before {
-        width: 100%;
-        height: 6px;
-    }
-
     .datos {
         justify-content: center;
     }
@@ -373,3 +306,4 @@ body {
         font-size: 27px;
     }
 }
+

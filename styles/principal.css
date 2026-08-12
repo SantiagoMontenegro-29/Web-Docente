@@ -5,7 +5,6 @@
     text-decoration: none;
     list-style: none;
 }
-
 :root {
     --bg-main: #f0f2f5;
     --bg-main-tr: #aeaba67d;
@@ -20,7 +19,6 @@
     --text: #1C2826;
     --border-color: #dcdcdc;
 }
-
 body.dark-mode {
     --bg-main: #0F172A;
     --bg-card: #1E293B;
@@ -185,7 +183,6 @@ body {
         transform: translateY(0);
     }
 }
-
 main {
     animation: slideInUp 0.5s ease-out forwards;
 }
@@ -197,11 +194,14 @@ main {
 .titulo-alumno,
 .titulo-registro,
 .titulo-asistencia,
-.titulo-boletines,
+.titulo-boletin,
 .titulo-contacto,
 .titulo-nosotros,
-#titulo-not{
+#titulo-not,
+.titulo-asistencia,
+.titulo-login{
     max-width: 1100px;
+    width: 100%;
     margin: 0 auto 25px;
     padding: 40px 30px;
     color: white;
@@ -218,11 +218,13 @@ main {
 .titulo-estadisticas h2,
 .titulo-alumno h2,
 .titulo-registro h2,
-.titulo-asistencia,
-.titulo-boletines,
-.titulo-contacto,
-.titulo-nosotros,
-#titulo-not h2{
+.titulo-asistencia h2,
+.titulo-boletin h2,
+.titulo-contacto h2,
+.titulo-nosotros h2,
+#titulo-not h2,
+.titulo-asistencia h2,
+.titulo-login h2{
     margin-bottom: 10px;
     font-size: 50px;
     font-weight: bold;
@@ -234,38 +236,32 @@ main {
 .titulo-estadisticas p,
 .titulo-alumno p,
 .titulo-registro p,
-.titulo-asistencia
-.titulo-boletines,
-.titulo-contacto,
-.titulo-nosotros,
-#titulo-not p{
+.titulo-boletin p,
+.titulo-contacto p,
+.titulo-nosotros p,
+#titulo-not p,
+.titulo-asistencia p,
+.titulo-login p{
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
     color: #e3eee4;
 }
-
-
 .titulo-detalle nav a,
 .titulo-alumno a,
-.titulo-registro a {
+.titulo-registro a,
+.titulo-detalle a
+{
     display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
     color: white;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
     text-decoration: none;
 }
 
-.titulo-detalle nav a i,
-.titulo-alumno a i,
-.titulo-registro a i {
-    position: absolute;
-    left: 0;
-    font-size: 28px;
-}
 
 /* footer */
 .conteinerfooter {
