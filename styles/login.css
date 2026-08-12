@@ -131,7 +131,7 @@ input::placeholder {
 }
 
 .btn:hover {
-    transform: translateY(-10px);
+    transform: translateY(-6px);
     letter-spacing: 2px;
     border-radius: 45px;
 }
@@ -173,7 +173,7 @@ input::placeholder {
 }
 
 #password-olv:hover {
-    transform: translateY(-10px);
+    transform: translateY(-6px);
     letter-spacing: 2px;
     border-radius: 45px;
 }

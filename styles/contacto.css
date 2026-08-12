@@ -1,58 +1,16 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-    background:#f2f2f2;
-}
-
-main{
-    flex:1;    
-    animation: slideInUp 0.5s ease-out forwards;
-
-}
-
-
-/* =====================================
-   TITULO CONTACTO
-   ===================================== */
-
-main .titulo-contacto{
-    width:90%;
-    max-width:1100px;
-    margin:0 auto 25px;
-    padding:40px 30px;
-    color:white;
-    text-align:center;
-    font-family:Arial, Helvetica, sans-serif;
-    border-radius:20px;
-    background:linear-gradient(135deg, #2A4D3E, #29362b);
-    box-shadow:0 10px 20px rgba(0,0,0,.4);
-}
-
-main .titulo-contacto h2{
-    margin:0 0 10px;
-    font-size:50px;
-    font-weight:bold;
-    color:white;
-}
-
-
 /* =====================================
    CONTENEDOR PRINCIPAL
    ===================================== */
 
-main .contacto{
-    width:90%;
-    max-width:1100px;
-    margin:0 auto;
-    background:#fff;
-    padding:40px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+main .contacto {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    border-radius: 15px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.61);
+    margin-bottom: 50px;
 }
 
 
@@ -60,12 +18,16 @@ main .contacto{
    INTRODUCCION
    ===================================== */
 
-main .introduccion{
-    text-align:center;
-    color:#050505;
-    line-height:1.8;
-    margin-bottom:35px;
-    font-size:22px;
+main .introduccion {
+    padding: 40px;
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
+    border-radius: 15px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.61);
+    text-align: center;
+    color: var(--bg-main);
+    font-weight: bold;
+    margin-bottom: 35px;
+    font-size: 22px;
 }
 
 
@@ -73,29 +35,29 @@ main .introduccion{
    INFORMACION DE CONTACTO
    ===================================== */
 
-main .informacion{
-    margin-bottom:40px;
+main .informacion {
+    margin-bottom: 40px;
 }
 
-main .informacion h2{
-    color:#2A4D3E;
-    margin:0 0 20px;
-    border-left:5px solid #2A4D3E;
-    padding-left:10px;
-    font-size:28px;
-    font-weight:bold;
+main .informacion h2 {
+    color: var(--bg-main);
+    margin: 0 0 20px;
+    border-left: 5px solid #ffffff;
+    padding-left: 10px;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-main .datos p{
-    margin-bottom:14px;
-    color:#444;
-    font-size:18px;
-    line-height:1.5;
+main .datos p {
+    margin-bottom: 14px;
+    color: var(--bg-main);
+    font-size: 18px;
+    line-height: 1.5;
 }
 
-main .datos i{
-    width:28px;
-    color:#2A4D3E;
+main .datos i {
+    width: 28px;
+    color: var(--bg-main);
 }
 
 
@@ -103,43 +65,49 @@ main .datos i{
    FORMULARIO
    ===================================== */
 
-main .formulario{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
+main .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
-main .formulario h2{
-    color:#2A4D3E;
-    margin:0 0 2px;
-    border-left:5px solid #2A4D3E;
-    padding-left:10px;
-    font-size:28px;
-    font-weight:bold;
+main .formulario h2 {
+    color: var(--bg-main);
+    margin: 0 0 2px;
+    border-left: 5px solid #ffffff;
+    padding-left: 10px;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 main .formulario input,
-main .formulario textarea{
-    width:100%;
-    padding:14px;
-    border:1px solid #cfcfcf;
-    border-radius:8px;
-    outline:none;
-    font-size:16px;
-    background:#fff;
-    color:#333;
-    transition:.3s;
+main .formulario textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #cfcfcf;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
+    color: var(--bg-main);
+    transition: .3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.651);
 }
 
 main .formulario input:focus,
-main .formulario textarea:focus{
-    border-color:#2A4D3E;
-    box-shadow:0 0 8px rgba(42,77,62,.25);
+main .formulario textarea:focus {
+    border-color: var(--bg-main);
+    background: linear-gradient(135deg, #6f9276, #29362b);
+}
+main .formulario input::placeholder,
+main .formulario textarea::placeholder {
+    color: var(--bg-main);
+    opacity: 0.8;
 }
 
-main .formulario textarea{
-    resize:vertical;
-    min-height:150px;
+main .formulario textarea {
+    resize: vertical;
+    min-height: 150px;
 }
 
 
@@ -147,115 +115,71 @@ main .formulario textarea{
    BOTON ENVIAR
    ===================================== */
 
-main .formulario button{
-    display:block;
-    width:220px;
-    margin:5px 0 0;
-    padding:14px;
-
+main .formulario button {
+    display: block;
+    width: auto;
+    margin: 5px 0 0;
+    padding: 14px;
     background: linear-gradient(135deg, #2A4D3E, #29362b);
-
-    color:#fff;
-
-    border:none;
-
-    border-radius:15px;
-
-    cursor:pointer;
-    font-size:17px;
-
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 17px;
     font-weight: bold;
-
     font-family: Arial, Helvetica, sans-serif;
-
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
-
     position: relative;
-
     overflow: hidden;
-
     z-index: 1;
-
     white-space: nowrap;
-
     transition: transform 0.5s, border-radius 0.5s, letter-spacing 0.5s;
 }
-
-.formulario button::before{
-
+.formulario button::before {
     content: "";
-
     position: absolute;
-
     top: 0;
-
     left: 0;
-
     width: 100%;
-
     height: 100%;
-
     background: linear-gradient(135deg, #6f9276, #29362b);
-
     opacity: 0;
-
     z-index: -1;
-
     transition: opacity 0.8s;
 }
 
-.formulario button:hover{
-
+.formulario button:hover {
     transform: translateY(-10px);
-
     letter-spacing: 2px;
-
     border-radius: 45px;
 }
 
-.formulario button:hover::before{
+.formulario button:hover::before {
 
     opacity: 1;
 }
+
 /* ===========================
    Tablets
    =========================== */
 
-@media (max-width:992px){
+@media (max-width:992px) {
 
-    main{
-        padding:30px 15px;
-    }
-
-    main .titulo-contacto{
-        width:95%;
-        padding:30px 20px;
-    }
-
-    main .titulo-contacto h2{
-        font-size:40px;
-    }
-
-    main .contacto{
-        width:95%;
-        padding:30px;
-    }
-
-    main .introduccion{
-        font-size:19px;
+    main .introduccion {
+        font-size: 19px;
     }
 
     main .informacion h2,
-    main .formulario h2{
-        font-size:24px;
+    main .formulario h2 {
+        font-size: 24px;
     }
 
-    main .datos p{
-        font-size:16px;
+    main .datos p {
+        font-size: 16px;
     }
 
-    main .formulario button{
-        width:220px;
+    main .formulario button {
+        width: 220px;
     }
 }
 
@@ -264,75 +188,55 @@ main .formulario button{
    CELULARES
    ===================================== */
 
-@media (max-width:576px){
+@media (max-width:576px) {
 
-    main{
-        padding:20px 10px;
+    main .introduccion {
+        font-size: 15px;
+        line-height: 1.7;
+        text-align: justify;
+        margin-bottom: 25px;
     }
 
-    main .titulo-contacto{
-        width:100%;
-        padding:25px 15px;
-        margin-bottom:20px;
-    }
-
-    main .titulo-contacto h2{
-        font-size:30px;
-    }
-
-    main .contacto{
-        width:100%;
-        padding:20px 15px;
-        border-radius:10px;
-    }
-
-    main .introduccion{
-        font-size:15px;
-        line-height:1.7;
-        text-align:justify;
-        margin-bottom:25px;
-    }
-
-    main .informacion{
-        margin-bottom:30px;
+    main .informacion {
+        margin-bottom: 30px;
     }
 
     main .informacion h2,
-    main .formulario h2{
-        font-size:20px;
-        line-height:1.4;
+    main .formulario h2 {
+        font-size: 20px;
+        line-height: 1.4;
     }
 
-    main .datos p{
-        display:flex;
-        align-items:flex-start;
-        font-size:15px;
-        line-height:1.6;
-        margin-bottom:12px;
+    main .datos p {
+        display: flex;
+        align-items: flex-start;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 12px;
     }
 
-    main .datos i{
-        flex-shrink:0;
-        margin-right:8px;
+    main .datos i {
+        flex-shrink: 0;
+        margin-right: 8px;
     }
 
-    main .formulario{
-        gap:14px;
+    main .formulario {
+        gap: 14px;
     }
 
     main .formulario input,
-    main .formulario textarea{
-        font-size:15px;
-        padding:12px;
+    main .formulario textarea {
+        font-size: 15px;
+        padding: 12px;
     }
 
-    main .formulario textarea{
-        min-height:130px;
+    main .formulario textarea {
+        min-height: 130px;
     }
 
-    main .formulario button{
-        width:100%;
-        padding:13px;
-        margin-top:5px;
+    main .formulario button {
+        width: 100%;
+        padding: 13px;
+        margin-top: 5px;
     }
 }
