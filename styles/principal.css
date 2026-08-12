@@ -199,7 +199,8 @@ main {
 .titulo-nosotros,
 #titulo-not,
 .titulo-asistencia,
-.titulo-login{
+.titulo-login,
+.titulo-evaluaciones{
     max-width: 1100px;
     width: 100%;
     margin: 0 auto 25px;
@@ -224,7 +225,8 @@ main {
 .titulo-nosotros h2,
 #titulo-not h2,
 .titulo-asistencia h2,
-.titulo-login h2{
+.titulo-login h2,
+.titulo-evaluaciones h2{
     margin-bottom: 10px;
     font-size: 50px;
     font-weight: bold;
@@ -241,7 +243,8 @@ main {
 .titulo-nosotros p,
 #titulo-not p,
 .titulo-asistencia p,
-.titulo-login p{
+.titulo-login p,
+.titulo-evaluaciones p{
     margin: 0;
     font-size: 20px;
     color: #e3eee4;
