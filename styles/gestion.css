@@ -14,16 +14,14 @@
     align-items: center;
     gap: 15px;
     padding: 22px 20px;
-    background-color: rgba(255, 255, 255, 0.94);
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.712);
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
+    border-radius: 15px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.61);
     transition: 0.3s;
 }
 
 .stat-item:hover {
-    transform: translateY(-8px);
-    border-radius: 30px;
+    transform: translateY(-6px);
 }
 
 .stat-item i {
@@ -40,16 +38,27 @@
     box-shadow: 0 4px 10px rgba(42, 77, 62, 0.3);
 }
 
+.estadisticas-gestion .stat-item i {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    transition: transform .3s;
+}
+
+.estadisticas-gestion .stat-item:hover i {
+    transform: rotate(-8deg) scale(1.1);
+}
+
 .stat-item h4 {
     margin: 0;
-    color: var(--primary);
+    color: var(--bg-main);
     font-size: 26px;
     font-weight: bold;
 }
 
 .stat-item p {
     margin: 0;
-    color: #59635b;
+    color: var(--bg-main);
     font-size: 14px;
 }
 
@@ -59,24 +68,11 @@
     margin: 0 auto 30px;
     padding: 25px;
     color: var(--text);
-    background-color: rgba(255, 255, 255, 0.94);
+    background: linear-gradient(135deg, #2A4D3E, #29362b);
     border: 1px solid rgba(255, 255, 255, 0.45);
-    border-radius: 16px;
+    border-radius: 20px;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
 }
-
-.gestion::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 6px;
-    height: 100%;
-    background: linear-gradient(180deg, #2A4D3E, #6f9276);
-}
-
 .conteiner-gestion {
     width: 100%;
     margin: 0 auto 20px;
@@ -100,7 +96,7 @@
     width: 50px;
     height: 50px;
     flex-shrink: 0;
-    color: white;
+    color: var(--bg-main);
     font-size: 22px;
     border-radius: 12px;
     background: linear-gradient(135deg, #2A4D3E, #6f9276);
@@ -110,7 +106,7 @@
 .gestion h2 {
     margin: 0;
     font-size: 25px;
-    color: var(--primary);
+    color: var(--bg-main);
     font-weight: bold;
 }
 
@@ -122,19 +118,22 @@
 }
 
 .buscador i {
-    color: #8a8e8f;
+    color: var(--bg-main);
     font-size: 15px;
 }
 
 .buscador .input-group-text {
-    background-color: #e1eee3;
+    background: linear-gradient(135deg, #2A4D3E, #6f9276);
     border: 1px solid #c8dec9;
-    color: var(--primary);
+    color: var(--bg-main);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.664);
 }
 
 .buscador .form-control {
     border: 1px solid #c8dec9;
     border-radius: 0 8px 8px 0;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.664);
+
 }
 
 .buscador .form-control:focus {
@@ -177,8 +176,6 @@
 }
 
 .buscador .btn-gestion:hover {
-    transform: translateY(-10px);
-    letter-spacing: 2px;
     border-radius: 45px;
 }
 
@@ -196,14 +193,14 @@
 .table {
     width: 100%;
     margin: 0;
-    color: var(--text);
+      color: var(--bg-main);
     border-color: var(--border-color);
     vertical-align: middle;
 }
 
 .table thead th {
-    background: linear-gradient(135deg, #2A4D3E, #6f9276);
-    color: white;
+    background: linear-gradient(1deg, #2A4D3E, #6f9276);
+    color: var(--bg-main);
     text-align: center;
     padding: 15px 12px;
     white-space: nowrap;
@@ -213,24 +210,25 @@
 .table td {
     text-align: center;
     padding: 14px 12px;
-    background-color: transparent;
+    background-color: var(--primary);
+      color: var(--bg-main);
 }
 
 .table tbody th {
     text-align: center;
     padding: 14px 12px;
-    background-color: transparent;
-    color: var(--primary);
+    background-color: var(--primary);
+    color: var(--bg-main);
     font-weight: bold;
 }
 
-.table-striped > tbody > tr:nth-of-type(odd) > * {
-    color: var(--text);
-    background-color: #ecf5ed;
+.table-striped > tbody > tr {
+background-color: var(--primary);
+  color: var(--bg-main);
 }
 
-.table-hover > tbody > tr:hover > * {
-    color: var(--text);
+.table-hover > tbody > tr:hover{
+      color: var(--bg-main);
     background-color: #d7e5d9;
 }
 
